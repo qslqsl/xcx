@@ -1,0 +1,8 @@
+<view>
+  <view class="xiugai">
+    <input placeholder="请修改保护值" style="font-size:24rpx;padding-left:20rpx;"></input>
+  </view>
+  <view class="success" catchtap="successback">
+    <text>完成</text>
+  </view>
+</view>

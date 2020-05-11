@@ -1,0 +1,80 @@
+ <view class="MaxContainer">
+  <view class="CardInfoFont">
+    <text>证件资料</text>
+  </view>
+  <view class="Card">
+    <view class="PositiveCard">
+      <view wx:if="{{z_img==''}}">
+        <image src="../../images/headimg/Cardinformation.png" class="Img"></image>
+        <image src="../../images/FrontofIDcard.png" class="InImg"></image>
+      </view>
+      <view wx:else>
+        <image src="../../images/headimg/Cardinformation.png" class="Img"></image>
+        <image src="{{z_img}}" class="InImg"></image>
+      </view>
+      <text catchtap="ShootingFront">拍摄正面</text>
+    </view>
+    <view class="NegativeCard">
+      <view wx:if="{{f_img==''}}">
+        <image src="../../images/headimg/Cardinformation.png" class="Img"></image>
+        <image src="../../images/FrontofIDcard.png" class="InImg"></image>
+      </view>
+      <view wx:else>
+        <image src="../../images/headimg/Cardinformation.png" class="Img"></image>
+        <image src="{{f_img}}" class="InImg"></image>
+      </view>
+      <text catchtap="ShootNegative">拍摄正面</text>
+    </view>
+  </view>
+  <view class="BankInfoFont">
+    <text>银行资料</text>
+  </view>
+
+  <view class="BankInfo">
+    <view class="BankOne">
+      <text>持卡人姓名</text>
+      <input placeholder="请输入持卡人姓名"></input>
+    </view>
+    <view class="BankOne">
+      <text>银行卡号</text>
+      <input placeholder="请输入卡号"></input>
+    </view>
+    <view class="BankThree">
+      <text>开户银行</text>
+      <input placeholder="全部"></input>
+      <image src="../../images/ic_foldscreen_dowm@2x.png"></image>
+    </view>
+    <view class="BankThree">
+      <text>开户地点</text>
+      <input placeholder="请输入开户地点"></input>
+      <image src="../../images/ic_foldscreen_dowm@2x.png"></image>
+    </view>
+    <view class="BankOne">
+      <text>开户支行</text>
+      <input placeholder="请输入开户支行名称"></input>
+    </view>
+  </view>
+
+  <view class="InfoBottom">
+    <view class="Info-one">
+      <text>银行卡资料</text>
+      <text>包含账号</text>
+    </view>
+    <!-- <view class="Info-two">
+      <image src="../../images/Adto.png"></image>
+    </view> -->
+    <view class="Info-three">
+      <view wx:if="{{last_img==''}}" catchtap="yinghangka" class="Info-two">
+        <image src="../../images/Adto.png"></image>
+      </view>
+      <view else class="Info-two">
+        <image src="{{last_img}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="success" catchtap="successback">
+    <text>完成</text>
+  </view>
+
+ </view>

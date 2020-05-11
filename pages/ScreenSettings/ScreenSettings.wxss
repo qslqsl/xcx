@@ -1,0 +1,559 @@
+page{
+  background-color: #ffffff;
+}
+.TitleBox{
+	margin-top: 10rpx;
+	width: 100%;
+	height: 86rpx;
+	background: #FFFFFF;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 20rpx;
+	box-sizing: border-box;
+  border-top: 10rpx solid rgb(240, 240, 240);
+}
+.TitleBox view{
+	width:160rpx;
+	height:50rpx;
+	background:rgba(240,240,240,1);
+	border-radius:6rpx;
+	display: flex;
+}
+.TitleBox view text{
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	margin: auto;
+}
+.underLine{
+	position: absolute;
+	bottom: -5rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+.AccountLevelBox{
+	width: 100%;
+  background: #FFFFFF;
+  position: relative;
+}
+.TypeBoxTop{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.TypeBoxTopText{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+}
+.ImgDown,.ImgUp{
+  width: 26rpx;
+	height: 14rpx;
+  margin-right: 20rpx;
+}
+.underLinetwo{
+	position: absolute;
+	bottom: -10rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+
+.YieldBox{
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+.TypeBoxToptwo{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.TypeBoxTopTexttwo{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+}
+.YieldBoxBottom2{
+  width: 350rpx;
+  /* display: flex; */
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.sylsylys{
+  display: flex;
+}
+.Line{
+	width:70rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+	margin: 23rpx;
+}
+.YieldBoxBottom2Min{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.YieldBoxBottom2Max{
+  display:inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.underLinethree{
+  position: absolute;
+	bottom: -20rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+.WithdrawalrecentBox{
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+.TypeBoxTopthree{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  margin-top: 10rpx;
+}
+.TypeBoxTopTextthree{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+  
+}
+.WithdrawalrecentBoxBottom2{
+  width: 350rpx;
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.WithdrawalrecentBoxBottom2Min{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.WithdrawalrecentBoxBottom2Max{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.underLinefour{
+  position: absolute;
+	bottom: -20rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+.TradingCycleBox{
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+.TypeBoxTopfour{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  margin-top: 10rpx;
+}
+.TypeBoxTopTextfour{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+}
+.TradingCycleBoxBottom2{
+  width: 350rpx;
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.TradingCycleBoxBottom2Min{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.TradingCycleBoxBottom2Max{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.underLinefive{
+  position: absolute;
+	bottom: -20rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+
+.AccountAmountBox{
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+.TypeBoxTopfive{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  margin-top: 10rpx;
+}
+.TypeBoxTopTextfive{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+}
+.AccountAmountBoxBottom2{
+  width: 350rpx;
+  display: flex;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.AccountAmountBoxBottom2Min{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.AccountAmountBoxBottom2Max{
+  display: inline-block;
+  width: 130rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  color: rgb(51, 51, 51);
+  background-color: rgb(240, 240, 240);
+}
+.underLinesix{
+  position: absolute;
+	bottom: -20rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+.lastbox{
+  background-color: #ffffff;
+  width: 100%;
+  position: relative;
+  margin-bottom: 130rpx;
+}
+.TypeBoxTopsix{
+	width: 100%;
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  margin-top: 10rpx;
+}
+.TypeBoxTopTextsix{
+	font-size:28rpx;
+	color:rgba(51,51,51,1);
+  margin-left: 20rpx;
+}
+.lastbox-con{
+  width: 710rpx;
+  margin: -20rpx auto;
+  /* display: flex !important;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-top: -20rpx; */
+}
+.tcall{
+  width: 100rpx;
+  height: 48rpx;
+  margin-top: 20rpx;
+  background-color: rgb(53, 152, 165);
+  border-radius: 6rpx;
+  display: inline-block;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
+}
+.tcall text{
+  line-height: 48rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24rpx;
+}
+.tcadd{
+  width: 100rpx;
+  height: 48rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  background-color: rgb(240, 240, 240);
+  border-radius: 6rpx;
+  display: inline-block;
+  text-align: center;
+  /* display: flex;
+  justify-content: center; */
+}
+.tcadd text{
+  line-height: 48rpx;
+  font-size: 24rpx;
+}
+/* value返回值 */
+.addval image{
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+}
+.addval{
+  display: inline-block;
+  margin-left: 20rpx;
+  min-width: 90rpx;
+  background: rgb(53, 152, 165);
+  color: #fff;
+  font-size: 26rpx;
+  position: relative;
+}
+/* .tjMax{
+  position: relative;
+  margin-top: 20rpx;
+}
+.tjcon{
+  width: 125rpx;
+  height: 48rpx;
+  background: rgb(53, 152, 165);
+  border-radius: 6rpx;
+  margin-left: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.tjimg{
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: -8rpx;
+  right: -8rpx;
+}
+.tjbox{
+  width: 125rpx;
+  height: 48rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tjbox text{
+  font-size: 24rpx;
+  color: #fff;
+} */
+
+
+.underLineseven{
+  position: absolute;
+	bottom: -20rpx;
+	right: 20rpx;
+	width:710rpx;
+	height:1px;
+	background:rgba(235,235,235,1);
+  z-index: 2;
+}
+
+
+
+
+.ContentBottom{
+  width: 100%;
+  height: 110rpx;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.BottomBtn{
+  width: 710rpx;
+  margin:auto;
+  margin-top: 23rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.BottomBtn text{
+  font-size: 28rpx;
+}
+.BottomBtn text:nth-of-type(1){
+  display: inline-block;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  width: 184rpx;
+  color: rgb(219, 219, 219);
+  border: 1rpx solid rgb(235, 235, 235);
+}
+.BottomBtn text:nth-of-type(2){
+  display: inline-block;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  width: 492rpx;
+  border-radius: 6rpx;
+  color: #ffffff;
+  background-color: rgb(53, 152, 165);
+}
+
+
+
+
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 600rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+.tcbox{
+  width: 100%;
+}
+.top-con{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid rgb(235, 235, 235);
+}
+.cha{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.font-jjsxz{
+  font-size: 28rpx;
+  color: rgba(51,51,51,1);
+}
+.font-qd{
+  font-size: 30rpx;
+  color: rgb(53, 152, 165);
+  margin-right: 20rpx;
+}
+.bottom-con{
+  width: 710rpx;
+  height:100rpx;
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid rgb(235, 235, 235);
+}
+.bottom-con text{
+  font-size: 28rpx;
+  color: rgba(51,51,51,1);
+}
+.dui{
+  width: 30rpx;
+  height: 30rpx;
+}
+.colcol{
+  color: rgb(53, 152, 165) !important;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+
+

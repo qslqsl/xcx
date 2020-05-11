@@ -1,0 +1,26 @@
+<view class="FollowBigShot">
+		<view class="FollowBigShotTitle clearfix" bindtap="GoToFollowBigShot">
+			<text class="FollowBigShotText">跟随大咖</text>
+			<image src="../../../images/mine_more.png" class="ImgMore"></image>
+		</view>
+		<view class="FollowBigShotContentLine" wx:for="{{FollowBigShotDataList}}" wx:key="index" bindtap="GoToHisTradeStars">
+			<!-- 去他人账户  默认展示  跟随方账户 信息 -->
+			<view class="FollowBigShotContentLineLeft"><image src="{{item.imgurl}}" mode="" class="FollowBigShotHeadingImg" lazy-load></image></view>
+			<view class="FollowBigShotContentLineRightBox">
+				<view class="FollowBigShotContentLineRight">
+					<view class="TextBox">
+						<text class="TradeUsername">{{ item.username }}</text>
+						<text class="TradeAccountMumber">@{{ item.accountnumner }}</text>
+						<view class="yields2value">￥{{ item.followaccount }}</view>
+					</view>
+					<view class="TextBox">
+						<view class="ThreeteenMaximum">跟随收益率：32.57%</view>
+						<view class="yields2">跟随收益</view>
+					</view>
+					<view class="TextBox">
+						<view class="tradCycle">交易周期：{{ item.tradecycle }}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>

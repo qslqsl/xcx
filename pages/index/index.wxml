@@ -1,0 +1,100 @@
+<view class="container">
+
+<!-- 状态栏 -->
+<!-- <view style='height: {{statusBarHeight}}px;'></view> -->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="IndexTopBar">
+    <view class="IndexTopBarCon">
+      <view bindtap="GoToBindingAccount">成为交易员</view>
+      <view>账户</view>
+    </view>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+
+<!-- 首页topbar自定义导航栏 -->
+  <!-- <view class="IndexTopBar">
+    <view class="IndexTopBarCon">
+      <view></view>
+      <view>账户</view>
+      <view>成为交易员</view>
+    </view>
+  </view> -->
+  <!-- <view style="height:{{statusBarHeight+PersonTitleHeight}}px"></view> -->
+  <!-- 账户页面导航栏 -->
+  <view class="TitleIndex">
+  <!-- <view class="TitleIndex" style="margin-top:{{statusBarHeight+PersonTitleHeight+5}}px"> -->
+			<text bindtap="GOtoTradeStars">交易明星</text>
+			<text bindtap="GoToFollowBigShot">跟随大咖</text>
+			<text bindtap="GoToHotVariety">热门品种</text>
+	</view>
+  <!-- 账户页面搜索 -->
+  <view class="SearchBoxIndex">
+			<view class="SearchInput">
+				<image src="../../images/ic_reasch@2x.png" mode="" class="imgSearch"></image>
+				<input type="text" value="" placeholder="搜索昵称" class="searchClass" placeholder-class="placeholder_style" bindtap="GoToSearchNickName"/>
+			</view>
+			<view class="ScreenButton" bindtap="GoToScreenSettings">
+				筛选
+			</view>
+	</view>
+
+
+  <!-- 账户横向滚动 -->
+  <view class="BackGroundWhite">
+			<scroll-view class="scroll-view_H" scroll-x="true">
+				<view class="scroll-view-item_H"  wx:for="{{scrollDataList}}" wx:key="index">
+          <view>
+            <image src="{{item.imgs}}" class="BgmBox"></image>
+          </view>
+          <view>
+            <image src="{{UserHeadImg}}" mode="" class="accountHeadImg" lazy-load></image>
+          </view>
+					<view class="UserName">{{item.username}}</view><view class="AccountNumber">@{{item.accountnumner}}</view>
+					<view class="level">{{item.level}}</view>
+					<view class="server">{{item.server}}</view>
+					<view class="yields">收益率：<text class="yieldsvalue">{{item.yieldsvalue}}</text></view>
+					<view class="MaximumRetracement">最大回撤：<text class="MaximumRetracementValue">{{item.MaximumRetracementValue}}</text></view>
+					<view class="SubscribePrice">价格：<text class="SubscribePriceMonth">￥9.99/月</text></view>
+				</view>
+			</scroll-view>
+	</view>
+
+  <!-- 交易明星组件 -->
+	<TradeStars></TradeStars>
+  <!-- 跟随大咖组件 -->
+  <FollowBigShot></FollowBigShot>
+  <!-- 热门品种组件 -->
+  <HotVariety></HotVariety>
+
+</view>
+
+
+
+  <!-- 自定义底部导航栏 -->
+  <view class="tabbarBox">
+    <view class="tabbarview" catchtap="index" >
+      <image src="/images/Tabbar/ic_index_ckecked.png"></image>
+      <text class='active'>首页</text>
+    </view>
+    <view class="tabbarview" catchtap="Transaction">
+      <image src="/images/Tabbar/ic_account_unchecked.png"></image>
+      <text>交易</text>
+    </view>
+    <view class="tabbarview" catchtap="Quotation">
+      <image src="/images/Tabbar/ic_quotation_unchecked.png"></image>
+      <text>行情</text>
+    </view>
+    <view class="tabbarview" catchtap="My">
+      <image src="/images/Tabbar/ic_mine_unchecked.png"></image>
+      <text>我的</text>
+    </view>
+  </view>
+
+
+
+

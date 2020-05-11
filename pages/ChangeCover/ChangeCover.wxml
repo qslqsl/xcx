@@ -1,0 +1,21 @@
+<!-- 自定义顶部导航栏 -->
+<view class="customtwo flex_center" style="padding-top:{{statusBarHeight}}px">
+  <!-- <view class="backimgbox" bindtap="backTabBar">
+      <image src="../../images/white_hint.png" class="backimg"></image>
+    </view> -->
+</view>
+<view class="empty_customtwo" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+<view class="max">
+  <view class="coverimg">
+    <image src="../../images/bg_MyAccountInfo.png"></image>
+  </view>
+  <view class="changebtn">
+    <text>更换封面</text>
+  </view>
+  <view class="nobtn" catchtap="quxiao">
+    <text>取消</text>
+  </view>
+</view>

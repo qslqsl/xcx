@@ -1,0 +1,7 @@
+<view class="Box">
+  <textarea class="TextareaBox" placeholder-style="color:#999999;font-size:24rpx" placeholder="请输入一段您的个性签名，最多可输入30字" maxlength="30"></textarea>
+  <text>0/30</text>
+</view>
+<view class="success" catchtap="success">
+  <text>完成</text>
+</view>

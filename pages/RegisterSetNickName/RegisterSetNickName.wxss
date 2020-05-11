@@ -1,0 +1,95 @@
+.customtwo{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+.customtwo text{
+  color: rgb(51, 51, 51);
+}
+.cen-box{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.empty_customtwo{
+  height: 45px;
+  width: 100%;
+}
+.con-back{
+  /* position: relative; */
+}
+.left{
+  margin-left: 20rpx;
+}
+.right{
+  margin-right: 20rpx;
+}
+
+
+
+.content{
+	position: relative;
+	background-color:#FFFFFF;
+}
+.TextBox{
+	position: relative;
+}
+.Text1,.Text2,.Text3,.NumberAcount{
+	position: absolute;
+}
+.Text1{
+	font-size:36rpx;
+	font-weight:bold;
+	color:rgba(62,62,63,1);
+	top:64rpx;
+	left:38rpx;
+}
+.Text2{
+	font-size:28rpx;
+	font-weight:500;
+	color:#999999;
+	top:120rpx;
+	left:39rpx;
+}
+.Text3{
+	width:670rpx;
+	height:35px;
+	box-sizing: border-box;
+	top:166rpx;
+	left:40rpx;
+	color:#333333;
+}
+.NumberAcount{
+	font-size:24rpx;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+	right:40rpx;
+	top: 245rpx;
+}
+.NoActiveUnderLine{
+	border-bottom:1rpx solid #EBEBEB;
+}
+.successbtn{
+  width: 360rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgb(53, 152, 165);
+  position: absolute;
+  top: 380rpx;
+  left: 50%;
+  margin-left: -180rpx;
+}
+.successbtn text{
+  font-size: 28rpx;
+  color: #ffffff;
+}

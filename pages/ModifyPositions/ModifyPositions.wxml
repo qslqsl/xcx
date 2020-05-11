@@ -1,0 +1,10 @@
+<view>
+  <view class="font">
+    <text>若账户跟随持仓的总数手超过设定值时，则不再开仓</text>
+  </view>
+
+    <input placeholder="请输入标准手" style="font-size:24rpx;padding-left:20rpx;" class="input"></input>
+  <view class="success" catchtap="successback">
+    <text>完成</text>
+  </view>
+</view>

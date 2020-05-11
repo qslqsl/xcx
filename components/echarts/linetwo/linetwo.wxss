@@ -1,0 +1,10 @@
+/* components/echarts/line/line.wxss */
+.containertwo{
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+}
+ec-canvas{
+  width: 100%;
+  height: 400%;
+}

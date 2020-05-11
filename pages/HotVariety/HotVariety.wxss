@@ -1,0 +1,186 @@
+page{
+   background-color: rgb(240, 240, 240);
+}
+/* 自定义顶部导航栏样式 */
+.custom{
+  display: flex;
+  align-items: center;
+}
+.zdyBar{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.zdyBar text{
+  font-size: 26rpx;
+  color: rgba(51,51,51,1);
+  margin-left: 17.5%;
+}
+.backbox{
+  width: 60rpx;
+}
+.back{
+  width: 16rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.addbox{
+  display: inline-block;
+  height: 36rpx;
+  width: 56rpx;
+  text-align: center;
+  margin-left: 8%;
+}
+.addhot{
+  width: 36rpx;
+  height: 36rpx;
+}
+
+
+
+.choose{
+		width:100%;
+		height: 60rpx;
+		line-height: 60rpx;
+		background-color: #FFFFFF;
+		margin-top: 10rpx;
+		font-size: 24rpx;
+	}
+.choose view{
+		height: 60rpx;
+		float: left;
+	}
+.choose view:nth-of-type(1){
+		margin-left: 20rpx;
+	}
+.choose view:nth-of-type(2){
+		margin-left: 117rpx;
+	}
+
+.choose view:nth-of-type(1) text{
+    display: inline-block;
+    height: 100%;
+    width: 80rpx;
+	}
+.choose view:nth-of-type(2) text{
+    display: inline-block;
+    height: 100%;
+    width: 120rpx;
+	}
+.text{
+		font-size: 24rpx;
+		line-height: 50rpx;
+    color: rgb(153, 153, 153);
+	}
+.text text:nth-of-type(1){
+		margin-left: 383rpx;
+	}
+.text text:nth-of-type(2){
+		margin-left: 216rpx;
+	}
+
+
+
+.price-one{
+		width: 100%;
+		height: 105rpx;
+		display:flex ;
+		align-items: center;
+		flex-flow: wrap;
+		background-color: #FFFFFF;
+		padding: 0 20rpx;
+		box-sizing: border-box;
+		border-bottom: 1rpx solid #EBEBEB;
+	}
+.price-conone{
+		display: flex;
+		flex: 1.29;
+		flex-flow: column;
+		justify-content: flex-start;
+				
+	}
+.price-conone text{
+		display: flex;
+		flex: 1;
+	}
+.price-conone text:nth-of-type(1){
+		font-size: 26rpx;
+		font-weight: bold;
+		color:rgba(51,51,51,1);
+	}
+.price-conone text:nth-of-type(2){
+		font-size: 23rpx;
+		color: #999999;
+	}
+.textLast{
+		position: absolute;
+		top:50%;
+		left:50%;
+		margin-left: -26rpx;
+		margin-top:-14rpx;
+		width:52rpx;
+		height:28rpx;
+		text-align: center;
+		line-height: 28rpx;
+		background:rgba(255,255,255,1);
+		border-radius:6rpx;
+		font-size:20rpx;
+		font-weight:400;
+		color:rgba(51,51,51,1);
+	}
+.price-contwo{
+	  display: flex;
+	  flex: 2;
+	  flex-flow: wrap;
+	  height: 100%;
+	  align-items: center;
+	  justify-content: center;
+	  position: relative;
+	  color:rgba(255,255,255,1);
+			}
+.AUD{
+  width:220rpx;
+	height:52rpx;
+	line-height:52rpx;
+	border-radius:6rpx;
+  background:rgba(37,155,36,1);
+	margin-right: 7rpx;
+  display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.CAD{
+  width:220rpx;
+	height:52rpx;
+	line-height:52rpx;
+	border-radius:6rpx;
+  background:rgba(229,28,35,1);
+  display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+.ImageArrow{
+	width: 16rpx;
+	height: 16rpx;
+	margin-left: 7rpx;
+	}
+
+.ErSi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx !important;
+}
+.SanEr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx !important;
+}
+
+.on{
+  color: rgb(53, 152, 165);
+}

@@ -1,0 +1,73 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+.asdsa{
+		width: 750rpx;
+		height:244rpx;
+		background:rgba(255,255,255,1);
+		margin-top: 10rpx;
+		
+	}
+.asdsaa{
+		width: 730rpx;
+		height: 154rpx;
+		position: relative;
+		box-sizing: border-box;
+		border-bottom: 1rpx solid #EBEBEB;
+		margin-left:20rpx;
+		display: -webkit-flex; /* Safari */
+		display: flex;
+		flex-flow: column;
+	}
+.asdsaa view{
+			display: flex;
+			flex: 1;
+		}
+.asdsaa	view:first-child{
+			align-items: center;
+			justify-content: space-between;
+		}
+.text{
+		font-size:28rpx;
+		font-weight:400;
+		color:rgba(51,51,51,1);
+	
+	}
+.text2{
+		width: 720rpx;
+		font-size:24rpx;
+		font-weight:400;
+		color:rgba(153,153,153,1);
+	
+	}
+.asdaa{
+		width: 750rpx;
+		height: 89rpx;
+		display: -webkit-flex; /* Safari */
+		display: flex;
+		align-items: center;
+		white-space:nowrap;
+		text-overflow:ellipsis; 
+		position: relative;
+	}
+.text3{
+		font-size:28rpx;
+		font-weight:400;
+		color:rgba(51,51,51,1);
+		position: absolute;
+		left: 22rpx;
+	}
+.text4{
+		font-size:24rpx;
+		font-weight:400;
+		color:rgba(153,153,153,1);
+		position: absolute;
+		right: 52rpx;
+		top: 28rpx;
+	}
+.img_more{
+		width: 15rpx;
+		height: 28rpx;
+		position: absolute;
+		right:21rpx;
+	}

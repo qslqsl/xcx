@@ -1,0 +1,127 @@
+<!-- 自定义导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="MyTopBar">
+    <view class="MyTopBarCon">
+      <text>我的</text>
+    </view>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<!-- 用户完成登录 -->
+<view class="avatar">
+
+
+    <view class="userbox">
+      <text class="moreInfo">登入后可获得更多信息</text>
+    </view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="GetUserInfoButton" style="width:240rpx;font-size:30rpx;" catchtap="GOToLoginPage">立即登录</button>
+
+
+
+  <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="GetUserInfoButton" style="width:240rpx;font-size:30rpx;">立即登录</button> -->
+
+
+    <block wx:else class="position">
+      <image src="{{userInfo.avatarUrl}}" class="UserImage" bindtap="GoToMyAccount"></image>
+      <text class="Username">{{userInfo.nickName}}</text>
+    </block>
+
+    <view class="OtherInfo">
+      <view class="OtherInfoBox" bindtap="GoToFans">
+        <text class="Fans">粉丝</text>
+        <text class="Fans-num">15</text>
+      </view>
+      <view class="OtherInfoBox" bindtap="GoToFocus">
+        <text class="Fans Follow">关注</text>
+        <text class="Fans-num Follow-num">45</text>
+      </view>
+    </view>
+
+
+</view>
+
+
+<view class="content">
+
+  <view class="content-one" bindtap="GoToMyAccount">
+    <image src="../../images/mine_account.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>我的账户</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+
+  <view class="content-one" bindtap="GoToTradeSettings">
+    <image src="../../images/mine_trade_setting.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>交易设置</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+  <view class="content-one" bindtap="GoToRiskSettings">
+    <image src="../../images/mine_risk_control.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>风控设置</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+  <view class="content-one" bindtap="GoToBindingAccount">
+    <image src="../../images/mine_addacount.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>添加账户</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class="content">
+  <view class="content-one" bindtap="GoToMyWallet">
+    <image src="../../images/mine_wallet.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>我的钱包</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+  <view class="content-one" bindtap="GoToCardInformation">
+    <image src="../../images/mine_cardInfo.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>卡证信息</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+  <view class="content-one" bindtap="GoToSetUp">
+    <image src="../../images/ic_setting@2x.png" class="ImgLeft"></image>
+    <view class="one-right">
+      <text>我的设置</text>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </view>
+</view>
+
+
+
+
+  <!-- 自定义底部导航栏 -->
+<view class="tabbarBox">
+    <view class="tabbarview" catchtap="index">
+      <image src="/images/Tabbar/ic_index_unckecked.png"></image>
+      <text>首页</text>
+    </view>
+    <view class="tabbarview" catchtap="Transaction">
+      <image src="/images/Tabbar/ic_account_unchecked.png"></image>
+      <text>交易</text>
+    </view>
+    <view class="tabbarview" catchtap="Quotation">
+      <image src="/images/Tabbar/ic_quotation_unchecked.png"></image>
+      <text>行情</text>
+    </view>
+    <view class="tabbarview" catchtap="My">
+      <image src="/images/Tabbar/ic_mine_checked.png"></image>
+      <text class='active'>我的</text>
+    </view>
+  </view>
+

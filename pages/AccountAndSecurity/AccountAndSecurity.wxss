@@ -1,0 +1,39 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+.SettingLineBox1{
+	width: 100%;
+	background:#FFFFFF ;
+	margin-top: 10rpx;
+}
+.SettingLine{
+	height: 95rpx;
+	margin-left:20rpx;
+	box-sizing: border-box;
+	border-bottom: 1rpx solid #EBEBEB;
+	position: relative;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.SettingLine .text{
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.SettingLine .text2{
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 21rpx;
+}
+.img_more{
+	width: 15rpx;
+	height: 28rpx;
+	position: absolute;
+	right:21rpx;
+}

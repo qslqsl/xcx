@@ -1,0 +1,155 @@
+<!-- 自定义顶部导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="zdyBar">
+    <view class="backbox"  bindtap="backone">
+      <image src="../../images/ic_back@2x.png" class="back"></image>
+    </view>
+    <text>跟随大咖</text>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+
+<view class="container">
+  <view class="con-con">
+    <view class="con-bar">
+      <view class="{{showOne==true?'one col':'one'}}" catchtap="topnavone">
+        <text>{{Aone}}</text>
+        <image src="{{ff?imgurlone:imgurltwo}}"></image>
+      </view>
+      <view class="{{showTwo==true?'two col':'two'}}" catchtap="topnavTwo">
+        <text>{{Atwo}}</text>
+        <image src="{{zz?imgurlone:imgurltwo}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="commodity_screen" catchtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--近一月收益-弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view wx:if="{{showOne}}">
+      <view catchtap="hideModal">
+        <view class="backfff" wx:for="{{zhxz}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh" catchtap="gszhjzTap" data-index="{{index}}">
+            <view class="{{rrrstate==index?'zhzh-con col':'zhzh-con'}}">
+              <view>{{item.zhone}}</view>
+            </view>
+            <image src="../../images/choose@2x.png" class="{{rrrstate==index?'':'dis'}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="GSSYcommodity_screen" catchtap="GSSYhideModal" wx:if="{{GSSYshowModalStatus}}"></view>
+  <!--跟随收益从高到低-弹出框  -->
+  <view animation="{{GSSYanimationData}}" class="GSSYcommodity_attr_box" wx:if="{{GSSYshowModalStatus}}">
+    <view wx:if="{{showTwo}}">
+      <view>
+        <view class="backfff" wx:for="{{zhxzTwo}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh">
+            <view class="{{zzzstate==index?'zhzh-con col':'zhzh-con'}}">
+              <view>{{item.zhonetwo}}</view>
+            </view>
+            <view class="lowlow">
+              <view class="{{oneindex==index?'HeightLow ysys':'HeightLow'}}" catchtap="gszhjzTapTwo" data-index="{{index}}">
+                <text class="{{oneindex==index?'ysystwo':''}}">高</text>
+                <image src="{{oneindex==index?headtwo:head}}"></image>
+                <text class="{{oneindex==index?'ysystwo':''}}">低</text>
+              </view>
+              <view class="{{twoindex==index?'LowHeight ysys':'LowHeight'}}" catchtap="gszhjzTapTwoT" data-index="{{index}}">
+                <text class="{{twoindex==index?' ysystwo':''}}">低</text>
+                <image src="{{twoindex==index?headtwo:head}}"></image>
+                <text class="{{twoindex==index?' ysystwo':''}}">高</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+  <view class="BackColor" catchtap="GoToHisTradeStars">
+    <view class="FollowBigShotBox" wx:for="{{FollowBigShotDataList}}" wx:key="index">
+      <view class="FollowBigShotBoxTop">
+        <image src="{{item.headingImg}}" class="FollowBigShotHeadingImg" lazy-load></image>
+        <view class="FollowBoxRight">
+          <view class="FollowBoxRight1">
+            <view>{{ item.username }}</view>
+            <view>{{ item.Server }}</view>
+          </view>
+          <view class="FollowBoxRight2" catchtap="followed" id="{{index}}">
+            <view wx:if="{{item.isFocus==1}}">已关注</view>
+            <view wx:if="{{item.isFocus==0}}">关注</view>
+          </view>
+        </view>
+      </view>
+      <view class="FollowBigShotBoxBottom">
+        <view class="FollowBigShotBottomLeft">
+          <view class="View1">
+            <view class="view1">
+              <view class="BigShotFonts">跟随收益</view>
+              <view class="BigShotNumber">{{ item.FollowAmount }}</view>
+            </view>
+            <view class="view1">
+              <view class="BigShotFonts">盈亏点数</view>
+              <view class="BigShotNumber">{{ item.BreakevenPoint }}</view>
+            </view>
+            <view class="view1">
+              <view class="BigShotFonts">跟随收益率</view>
+              <view class="BigShotNumber">{{ item.FollowYield }}</view>
+            </view>
+          </view>
+          <view class="View2">
+            <view class="view1">
+              <view class="BigShotFonts">平均收益点数</view>
+              <view class="BigShotNumber">{{ item.AverageRevenuePoints }}</view>
+            </view>
+            <view class="view1">
+              <view class="BigShotFonts">跟随笔数</view>
+              <view class="BigShotNumber">{{ item.FollowerNumber }}</view>
+            </view>
+            <view class="view1">
+              <view class="BigShotFonts">交易周期</view>
+              <view class="BigShotNumber">{{ item.TradingCycle }}</view>
+            </view>
+          </view>
+        </view>
+        <view class="FollowBigShotBottomRight">
+          <image src="{{item.TrenChart}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--关注-已关注-弹窗 -->
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <!-- 弹出层 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="tcmax-box">
+      <view class="box-top">
+        <text>提示</text>
+        <text>{{contentgz}}</text>
+      </view>
+      <view class="box-bottom">
+        <view class="box-qx" catchtap="boxqx">
+          <text>取消</text>
+        </view>
+        <view class="box-qr" catchtap="boxqr">
+          <text>确认</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

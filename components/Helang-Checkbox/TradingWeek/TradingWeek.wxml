@@ -1,0 +1,14 @@
+<view class="MaxContainerTwo">
+  <view class="MainContentTwo">
+      <view class="{{ysState==index?'ystwo cc':'cc'}}" wx:for="{{RateOfReturnList}}" wx:key="index" data-index="{{index}}" bindtap="jyzs">
+        <text class="{{ysState==index?'Minwidth ysys':'Minwidth'}}">{{item.Rateone}}</text>
+      </view>
+      <!-- <text class="Maxwidth">{{item.Ratetwo}}</text>
+      <text class="Maxwidth">{{item.Ratethree}}</text>
+      <text class="Maxwidth">{{item.Ratefour}}</text>
+      <text class="Maxwidth">{{item.Ratefive}}</text> -->
+  </view>
+  <text class="underLinetwo"></text>
+</view>
+
+

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "AccountRating":"/components/Helang-Checkbox/AccountRating/AccountRating",
+    "RateOfReturn":"/components/Helang-Checkbox/RateOfReturn/RateOfReturn",
+    "Retracement":"/components/Helang-Checkbox/Retracement/Retracement",
+    "TradingWeek": "/components/Helang-Checkbox/TradingWeek/TradingWeek",
+    "AccountValue":"/components/Helang-Checkbox/AccountValue/AccountValue"
+  }
+}

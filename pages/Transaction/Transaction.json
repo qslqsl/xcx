@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "line": "/components/echarts/line/line",
+    "linetwo": "/components/echarts/linetwo/linetwo",
+    "colume": "/components/echarts/colume/colume",
+    "area": "/components/echarts/area/area",
+    "areatwo": "/components/echarts/areatwo/areatwo"
+    },
+  "navigationStyle": "custom"
+}

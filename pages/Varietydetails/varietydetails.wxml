@@ -1,0 +1,81 @@
+<!-- 自定义顶部导航栏 -->
+<view class="customtwo flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="backimgbox" bindtap="backTabBar">
+      <image src="../../images/white_hint.png" class="backimg"></image>
+  </view>
+</view>
+<view class="empty_customtwo" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="bag">
+		<view class="NavigationBar">
+			<view class="text">
+				<view>AUD/CAD</view>
+				<view>澳元/加元</view>
+			</view>
+		</view>
+		<view class="FillingHeight2"></view>
+
+		<view class=" record">
+			<view class="bgrecord">
+				<view>0.001660</view>
+				<view>+0.13%</view>
+				<view>0.00145</view>
+			</view>
+			<view class="smrecord">
+				<view>
+					<view class="fonts">高</view>
+					<view class="numbers">0.68683</view>
+				</view>
+				<view>
+					<view class="fonts">开</view>
+					<view class="numbers">0.68649</view>
+				</view>
+				<view>
+					<view class="fonts">买</view>
+					<view class="numbers">0.68070</view>
+				</view>
+				<view>
+					<view class="fonts">低</view>
+					<view class="numbers">0.68478</view>
+				</view>
+				<view>
+					<view class="fonts">收</view>
+					<view class="numbers">0.68649</view>
+				</view>
+				<view>
+					<view class="fonts">卖</view>
+					<view class="numbers">0.68478</view>
+				</view>
+			</view>
+		</view>
+		<view class="around"></view>
+		<view class="datagraph">
+			<view class="qiun-columns">
+				<view class="qiun-bg-white qiun-title-bar qiun-common-mt qiun-rows">
+					<view style="display: flex; flex: 1;flex-direction: wrap; justify-content: flex-end; align-items: center;qiun-rows;text-align: right;">
+						<view size="mini" class="font" bindtap="qqq"><text>放大</text></view>
+						<view size="mini" style="margin: 0 20upx;" class="font"><text>缩小</text></view>
+						<image src="../../images/ic_expand@2x.png" mode="" class="aroundimage"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+    <!-- <view class="shuju">
+      <image src="../../images/pic_Marketchart.png"></image>
+    </view> -->
+    
+    <!-- K线图组件 -->
+    <Kline></Kline>
+
+
+		<view class="fonttime">
+			<view wx:for="{{FontTimeDataList}}" data-index="{{index}}" wx:key="index" class="{{FontTimeIndex==index?'logocolor':'colorSanSan'}}" bindtap="Klinetime">
+				{{item.one}}
+			</view>
+		</view>
+
+	</view>
+
+  <view class="choose" bindtap="tanchuang"><text>＋自选</text></view>

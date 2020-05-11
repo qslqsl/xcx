@@ -1,0 +1,288 @@
+page {
+  background: rgb(240, 240, 240);
+}
+
+.logocolor {
+  color: rgba(53, 152, 165, 1);
+}
+
+.colorSanSan {
+  color: #333;
+}
+
+.customtwo {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  z-index: 999;
+}
+
+.empty_customtwo {
+  height: 45px;
+  width: 100%;
+}
+
+.con-back {
+  /* position: relative; */
+}
+
+.backimgbox {
+  width: 80rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.backimg {
+  width: 30rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 20rpx;
+  transform: rotate(180deg);
+}
+
+.bag {
+  width: 750rpx;
+  height: 214rpx;
+  background: rgba(53, 152, 165, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.NavigationBar {
+  background: #3598a5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-left: 300rpx;
+  margin-top: 6%;
+}
+
+.text view:nth-of-type(1) {
+  font-size: 36rpx;
+}
+
+.text	view:nth-of-type(2) {
+  font-size: 24rpx;
+}
+
+.choose {
+  width: 80%;
+  height: 80rpx;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  background: rgba(53, 152, 165, 1);
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose text {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+.record {
+  width: 710rpx;
+  height: 230rpx;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin-left: 20rpx;
+}
+
+.bgrecord {
+  margin-top: 22rpx;
+  overflow: hidden;
+}
+
+.bgrecord	view:nth-of-type(1) {
+  width: 213rpx;
+  height: 36rpx;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: rgba(37, 155, 36, 1);
+  line-height: 24rpx;
+  float: left;
+  margin-left: 25rpx;
+  margin-top: 38rpx;
+}
+
+.bgrecord	view:nth-of-type(2) {
+  width: 100rpx;
+  height: 22rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(37, 155, 36, 1);
+  line-height: 24rpx;
+  float: left;
+  margin-left: 194rpx;
+  margin-top: 45rpx;
+}
+
+.bgrecord	view:nth-of-type(3) {
+  width: 107rpx;
+  height: 22rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(37, 155, 36, 1);
+  line-height: 24rpx;
+  float: left;
+  margin-left: 46rpx;
+  margin-top: 45rpx;
+}
+
+.smrecord {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-left: 27rpx;
+  margin-right: 27rpx;
+}
+
+.fonts {
+  width: 22rpx;
+  height: 23rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 24rpx;
+  float: left;
+  margin-top: 37rpx;
+}
+
+.font {
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  background: rgb(248, 248, 248);
+  border: 1rpx solid rgb(231, 231, 231);
+}
+
+.font text {
+  color: rgb(0, 0, 0);
+  font-size: 24rpx;
+}
+
+.numbers {
+  width: 107rpx;
+  height: 22rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 24rpx;
+  float: left;
+  margin-left: 52rpx;
+  margin-top: 37rpx;
+}
+
+.around {
+  background: #fff;
+  width: 100%;
+  height: 160rpx;
+  margin-top: -166rpx;
+}
+
+.aroundimage {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 20rpx;
+}
+
+.shuju {
+  background: #fff;
+}
+
+.shuju image {
+  width: 100%;
+}
+
+.datagraph {
+  width: 100%;
+  background: #fff;
+  text-align: center;
+}
+
+.fonttime {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.fonttime	view {
+  font-size: 20rpx;
+  font-weight: bold;
+  line-height: 96rpx;
+}
+
+.fonttime	view:first-child {
+  margin-left: 23rpx;
+}
+
+.fonttime	view:last-child {
+  margin-right: 23rpx;
+}
+
+.OptionsPopupSuccessBox {
+  width: 584rpx;
+  height: 135rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6rpx;
+  margin: 0 83rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.OptionsPopupSuccessBox text {
+  display: flex;
+  flex: 1;
+  color: rgba(51, 51, 51, 1);
+}
+
+.OptionsPopupSuccessBox	text:first-child {
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.OptionsPopupSuccessBox	text:last-child {
+  font-size: 28rpx;
+  font-weight: 400;
+}
+
+.qiun-charts {
+  width: 750upx;
+  height: 550upx;
+  background-color: #fff;
+}
+
+.charts {
+  width: 750upx;
+  height: 550upx;
+  background-color: #fff;
+}
+
+.qiun-textarea {
+  height: 300upx;
+}

@@ -1,0 +1,79 @@
+page{
+  background: rgb(240, 240, 240);
+}
+.customtwo{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  z-index: 999;
+}
+.empty_customtwo{
+  height: 45px;
+  width: 100%;
+}
+.con-back{
+  /* position: relative; */
+}
+/* .backimgbox{
+  width: 80rpx;
+  height: 50rpx;
+  position: absolute;
+  bottom: 20rpx;
+}
+.backimg{
+  width: 30rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 20rpx;
+  transform: rotate(180deg);
+} */
+
+.max{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coverimg{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.coverimg image{
+  width: 100%;
+  height: 700rpx;
+}
+.changebtn{
+  width: 650rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(53, 152, 165);
+  border-radius: 10rpx;
+  /* margin-top: 100rpx; */
+  position: absolute;
+  top: 60%;
+}
+.changebtn text{
+  font-size: 28rpx;
+  color: #ffffff;
+}
+.nobtn{
+  width: 650rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 10rpx;
+  /* margin-top: 100rpx; */
+  position: absolute;
+  top: 80%;
+}
+.nobtn text{
+  font-size: 28rpx;
+  color: rgb(51, 51, 51);
+}

@@ -1,0 +1,392 @@
+<!-- 自定义顶部导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="zdyBar">
+    <view class="backbox"  bindtap="backone">
+      <image src="../../images/ic_back@2x.png" class="back"></image>
+    </view>
+    <text>交易明星</text>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+<view class="container">
+  <view class="con-con">
+    <view class="con-bar">
+      <view class="{{showOne==true?'one col':'one'}}" catchtap="aaaa" data-index="0">
+        <text>{{Aone}}</text>
+        <image src="{{ll?imgurlone:imgurlthree}}"></image>
+      </view>
+      <view class="{{showTwo==true?'two col':'two'}}" catchtap="bbbb" data-index="1">
+        <text>{{Atwo}}</text>
+        <image src="{{gg?imgurlone:imgurlthree}}"></image>
+      </view>
+      <view class="{{showThree==true?'three col':'three'}}" catchtap="cccc" data-index="2">
+        <text>{{Athree}}</text>
+        <image src="{{kk?imgurlone:imgurlthree}}"></image>
+      </view>
+      <view class="four" catchtap="GoToScreenSettings">
+        <text>{{Afour}}</text>
+        <image src="{{imgurltwo}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--账户评级高到低-弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view wx:if="{{showOne}}">
+      <view class="backfff" wx:for="{{zhpjgdd}}" wx:key="" id="{{index}}">
+        <view class="zhpjgdd" catchtap="zhpjgddTap" data-index="{{index}}">
+          <view class="{{lllstate==index?'zhpjgdd-con col':'zhpjgdd-con'}}">
+            <view>{{item.zhpjone}}</view>
+          </view>
+          <image src="../../images/choose@2x.png" class="{{lllstate==index?'':'dis'}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <!--屏幕背景变暗的背景  -->
+  <view class="SYLcommodity_screen" bindtap="SYLhideModal" wx:if="{{SYLshowModalStatus}}"></view>
+  <!--收益率-弹出框  -->
+  <view animation="{{SYLanimationData}}" class="SYLcommodity_attr_box" wx:if="{{SYLshowModalStatus}}">
+    <view wx:if="{{showTwo}}">
+      <view class="backfff">
+        <view class="syl">
+          <view catchtap="backcolor" data-index="0" class="{{acstate==0?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstate==0?'sylbctwo':''}}">不限</text>
+          </view>
+          <view catchtap="backcolor" data-index="1" class="{{acstate==1?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstate==1?'sylbctwo':''}}">≤10%</text>
+          </view>
+          <view catchtap="backcolor" data-index="2" class="{{acstate==2?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstate==2?'sylbctwo':''}}">10%-20%</text>
+          </view>
+          <view catchtap="backcolor" data-index="3" class="{{acstate==3?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstate==3?'sylbctwo':''}}">20%-30%</text>
+          </view>
+          <view catchtap="backcolor" data-index="4" class="{{acstate==4?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstate==4?'sylbctwo':''}}">≥30%</text>
+          </view>
+        </view>
+        <view class="syltwo">
+          <input placeholder="最小值" style="width:120rpx;height:50rpx;background:rgb(240, 240, 240);font-size:24rpx;border-radius: 4rpx;text-align:center;"></input>
+          <view class="sylhx"></view>
+          <input placeholder="最大值" style="width:120rpx;height:50rpx;background:rgb(240, 240, 240);font-size:24rpx;border-radius: 4rpx;text-align:center;"></input>
+        </view>
+        <view class="sylqdbox">
+          <view class="sylqd" catchtap="SYLhideModal">
+            <text>确定</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <!--屏幕背景变暗的背景  -->
+  <view class="SYLcommodity_screen" bindtap="ZDHChideModal" wx:if="{{ZDHCshowModalStatus}}"></view>
+  <!--最近13周最大回撤-弹出框  -->
+  <view animation="{{ZDHCanimationData}}" class="SYLcommodity_attr_box" wx:if="{{ZDHCshowModalStatus}}">
+    <view wx:if="{{showThree}}">
+      <view class="backfff">
+        <view class="syl">
+          <view catchtap="backcolorTwo" data-index="0" class="{{acstateTwo==0?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstateTwo==0?'sylbctwo':''}}">不限</text>
+          </view>
+          <view catchtap="backcolorTwo" data-index="1" class="{{acstateTwo==1?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstateTwo==1?'sylbctwo':''}}">≤10%</text>
+          </view>
+          <view catchtap="backcolorTwo" data-index="2" class="{{acstateTwo==2?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstateTwo==2?'sylbctwo':''}}">10%-20%</text>
+          </view>
+          <view catchtap="backcolorTwo" data-index="3" class="{{acstateTwo==3?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstateTwo==3?'sylbctwo':''}}">20%-30%</text>
+          </view>
+          <view catchtap="backcolorTwo" data-index="4" class="{{acstateTwo==4?'sylcon sylbc':'sylcon'}}">
+            <text class="{{acstateTwo==4?'sylbctwo':''}}">≥30%</text>
+          </view>
+        </view>
+        <view class="syltwo">
+          <input placeholder="最小值" style="width:120rpx;height:50rpx;background:rgb(240, 240, 240);font-size:24rpx;border-radius: 4rpx;text-align:center;"></input>
+          <view class="sylhx"></view>
+          <input placeholder="最大值" style="width:120rpx;height:50rpx;background:rgb(240, 240, 240);font-size:24rpx;border-radius: 4rpx;text-align:center;"></input>
+        </view>
+        <view class="sylqdbox">
+          <view class="sylqd" catchtap="ZDHChideModal">
+            <text>确定</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class="BackGroundWhite" catchtap="GoToHisTradeStars">
+    <view>
+      <view class="TradeStarsContentBox" wx:for="{{TradeStarsDataList}}" wx:key="index">
+        <view class="TradeStarsContentBoxLeft">
+          <image src="{{item.HeadingImage}}" class="HeadingImage" lazy-load></image>
+        </view>
+        <view class="TradeStarsContentBoxRight">
+          <view class="TradeStarsContentBoxRightLine1">
+            <text class="UserName">{{item.username}}</text>
+            <text class="AccountNumber">@{{item.AccountNumber}}</text>
+            <view class="RightLine1level">{{item.level}}</view>
+          </view>
+
+          <view class="con-one">
+            <view class="Font-one">
+              <text class="fontcolor">收益率</text>
+              <text class="numcolor">352.36%</text>
+              <text class="fontcolor">近13周最大回撤</text>
+              <text class="numcolor">352.36%</text>
+            </view>
+            <view class="Font-two">
+              <text class="fontcolor">跟随者收益</text>
+              <text class="numcolor">￥123.07</text>
+              <text class="fontcolor">实盘跟随总额</text>
+              <text class="numcolor">￥485,256.23</text>
+            </view>
+            <view class="Font-three">
+              <text class="fontcolor">累积订阅次数</text>
+              <text class="numcolor">26</text>
+              <view class="SubscribeBox" catchtap="GSDYTCtwo">￥{{item.pricemonth | Money}}/月</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+
+
+<!--屏幕背景变暗的背景  -->
+<view class="GSDYTCcommodity_screen" catchtap="GSDYTChideModal" wx:if="{{GSDYTCshowModalStatus}}"></view>
+<!--订阅-弹出框  -->
+<view animation="{{GSDYTCanimationData}}" class="GSDYTCcommodity_attr_box" wx:if="{{GSDYTCshowModalStatus}}">
+  <view class="cmwg">
+    <view class="cmwg-name">
+      <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@1</text></text>
+      <text class="zszh">（真实账户）</text>
+    </view>
+    <view class="cmwg-zh">
+      <text>您的跟随账户</text>
+    </view>
+    <view class="cmwg-tc" catchtap="gszhjz">
+      <text>{{ndgszh}}</text>
+      <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+    </view>
+    <view class="geli"></view>
+  </view>
+
+
+  <view class="gsfs-box">
+    <view class="gsfs">
+      <text>跟随方式</text>
+    </view>
+    <view class="zxgd" catchtap="gsfs">
+      <text>{{zxgd}}</text>
+      <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+    </view>
+  </view>
+
+  <view class="blodgeli"></view>
+
+  <view class="gdssgdbl">
+    <radio-group>
+      <view class="gdss" catchtap="gdss">
+        <label>
+          <view class="gdss-con">
+            <radio checked='{{true}}'></radio>
+            <text>固定手数</text>
+          </view>
+          <view class="{{gdblstate==0?'gdss-ipt':'gdss-ipt hidetwo'}}">
+            <input placeholder="≥0.01手" style="padding-left:54rpx;"></input>
+          </view>
+        </label>
+      </view>
+      <view class="gdbl" catchtap="gdbl">
+        <label>
+          <view class="gdbl-con">
+            <radio checked='{{check}}'></radio>
+            <text>固定比例</text>
+          </view>
+          <view class="{{gdblstate==1?'gdss-ipt':'gdss-ipt hidetwo'}}">
+            <input placeholder="≥10%" style="padding-left:54rpx;"></input>
+          </view>
+        </label>
+      </view>
+    </radio-group>
+  </view>
+  <view class="nextbtn" catchtap="nextbtn">
+    <text>下一步</text>
+  </view>
+
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screengszhjz" bindtap="gszhjzhideModal" wx:if="{{gszhjzshowModalStatus}}"></view>
+<!--账户名称-净值-弹出框  -->
+<view animation="{{gszhjzanimationData}}" class="commodity_attr_boxgszhjz" wx:if="{{gszhjzshowModalStatus}}">
+  <view class="zhxz">
+    <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gszhjzhideModal"></image>
+    <text>账户选择</text>
+  </view>
+
+  <view wx:for="{{zhxz}}" wx:key="" id="{{index}}">
+    <view class="zhzhzh" catchtap="gszhjzTap" data-index="{{index}}">
+      <view class="{{rrrstate==index?'zhzh-con col':'zhzh-con'}}">
+        <view>{{item.zhone}}</view>
+      </view>
+      <image src="../../images/choose@2x.png" class="{{rrrstate==index?'':'dis'}}"></image>
+    </view>
+  </view>
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screengsfs" bindtap="gsfshideModal" wx:if="{{gsfsshowModalStatus}}"></view>
+<!--跟随方式-弹出框  -->
+<view animation="{{gsfsanimationData}}" class="commodity_attr_boxgsfs" wx:if="{{gsfsshowModalStatus}}">
+  <view class="zhxz">
+    <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gsfshideModal"></image>
+    <text>跟随方式</text>
+  </view>
+  <view wx:for="{{gsfs}}" wx:key="" id="{{index}}">
+    <view class="zhzhzh" catchtap="zxgdTap" data-index="{{index}}">
+      <view class="{{nnnstate==index?'zhzh-con col':'zhzh-con'}}">
+        <text>{{item.zxone}}</text>
+      </view>
+      <image src="../../images/choose@2x.png" class="{{nnnstate==index?'':'dis'}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 下一步-弹窗 -->
+<view class="mask" animation="{{ani}}" wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="tcmax-box">
+    <view class="box-top">
+      <text>跟随的交易员是模拟账户</text>
+      <text>确认支付？</text>
+    </view>
+    <view class="box-bottom">
+      <view class="box-qx" catchtap="boxqx">
+        <text>取消</text>
+      </view>
+      <view class="box-qr" catchtap="boxqr">
+        <text>确认</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 下一步-确认-弹窗 -->
+<view class="mask" wx:if="{{showModaltwo}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModaltwo}}">
+  <view class="tcmax-box">
+    <view class="box-top">
+      <text>正在使用模拟账户跟随交易员</text>
+      <text>确认支付？</text>
+    </view>
+    <view class="box-bottom">
+      <view class="box-qx" catchtap="boxqrqx">
+        <text>取消</text>
+      </view>
+      <view class="box-qr" catchtap="boxqrqr">
+        <text>确认</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" catchtap="hideModalQR" wx:if="{{showModalStatusQR}}"></view>
+<!--弹出框  -->
+<view animation="{{animationDataQR}}" class="commodity_attr_boxQR" wx:if="{{showModalStatusQR}}">
+  <view class="cmwg">
+    <view class="cmwg-name">
+      <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@1</text></text>
+      <text class="zszh">（真实账户）</text>
+    </view>
+    <view class="cmwg-zh">
+      <text>选择您的订阅时间</text>
+    </view>
+
+    <view wx:for="{{dysj}}" wx:key="" id="{{index}}">
+      <view class="dytime timertop">
+        <text class="timer">{{item.time}}</text>
+        <view class="moneybox" catchtap="qrzfxx" data-index="{{index}}">
+          {{item.money}}
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" catchtap="QRZFhideModal" wx:if="{{QRZFshowModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{QRZFanimationData}}" class="commodity_attr_boxQRZF" wx:if="{{QRZFshowModalStatus}}">
+  <view class="QRZFXX-TOP">
+    <image src="../../images/ic_payfor_close@2x.png" class="qrzf-img" catchtap="QRZFhideModal"></image>
+    <text>确认支付信息</text>
+  </view>
+  <view class="money-name">
+    <text class="money-one">{{zfMoney}}</text>
+    <view class="name-font">跟随
+      <text class="name-name">{{zfName}}</text>
+      <text class="jiange"></text>时长：
+      <text class="name-name">{{zfTime}}</text>
+    </view>
+  </view>
+  <radio-group>
+    <label>
+      <view class="wxzf-box">
+        <view class="wxzf-con">
+          <image src="../../images/ic_payfor_wechat@2x.png" class="zf-img"></image>
+          <text>微信支付</text>
+        </view>
+        <radio checked='{{true}}' class="radio-right"></radio>
+      </view>
+    </label>
+    <label>
+      <view class="zfbzf-box">
+        <view class="zfbzf-con">
+          <image src="../../images/ic_payfor_alipay@2x.png" class="zf-img"></image>
+          <text>支付宝支付</text>
+        </view>
+        <radio checked='{{}}' class="radio-right"></radio>
+      </view>
+    </label>
+  </radio-group>
+  <view class="qrzf-btn" catchtap="qrzfbtn">
+    <text>确认支付</text>
+  </view>
+</view>

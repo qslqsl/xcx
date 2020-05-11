@@ -1,0 +1,61 @@
+<view class="ContentBox">
+  <view class="ContentBoxLine">
+    <text class="text">头像</text>
+    <view wx:if="{{z_img==''}}" class="HeadingImage">
+      <image src="../../images/headimg/pic_Headportrait2.png" class="HeadingImage" catchtap="ShootingFront"></image>
+    </view>
+    <view wx:else class="HeadingImage">
+      <image src="{{z_img}}" class="HeadingImage" catchtap="ShootingFront"></image>
+    </view>
+    <image src="../../images/ic_more.png" class="img_more"></image>
+  </view>
+
+  <view class="ContentBoxLine" bindtap="GoToSetNickName">
+    <text class="text">昵称</text>
+    <text class="text2">姑苏一杯倒</text>
+  </view>
+  <view class="ContentBoxLine shaj1">
+    <text class="text">绑定手机</text>
+    <text class="text2">134****1111</text>
+  </view>
+</view>
+<view class="AddressSettings">
+
+  <!-- <text class="text2">广东省-深圳市</text> -->
+  <picker mode="region" catchtap="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="ContentBoxLine">
+      <text class="text">所在地</text>
+      <view class="picker">{{region[0]}}-{{region[1]}}-{{region[2]}}</view>
+      <image src="../../images/ic_more.png" class="img_more"></image>
+    </view>
+  </picker>
+
+  
+    <!-- <text class="text2">男</text> -->
+    <picker bindchange="pickSex" value="{{ gender }}" class="sex" range="{{ columns }}">
+      <view class="ContentBoxLine">
+        <text class="text">性别</text>
+        <view class="picker">{{ columns[gender] == "" ? "请输入性别" : "" }}{{ columns[gender] }}</view>
+        <image src="../../images/ic_more.png" class="img_more"></image>
+      </view>
+    </picker>
+  
+
+  <!-- <text class="text2">1998-2-1</text>-->
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="ContentBoxLine">
+        <text class="text">生日</text>
+        <view class="picker">{{date}}</view>
+        <image src="../../images/ic_more.png" class="img_more"></image>
+      </view>
+    </picker>
+  
+
+
+
+  <view class="ContentBoxLine shaj2" bindtap="GoToPersonalizedSignature">
+    <text class="text">个性签名</text>
+    <image src="../../images/ic_more.png" class="img_more"></image>
+  </view>
+
+</view>

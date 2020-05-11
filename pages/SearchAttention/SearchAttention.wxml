@@ -1,0 +1,9 @@
+<view class="SearchContainer">
+  <view class="SearchContent">
+    <view class="Scontent">
+      <image src="../../images/ic_reasch@2x.png" class="searchImg"></image>
+      <input type="text" placeholder="搜全部关注" class="SearchName"></input>
+    </view>
+    <view class="cancel" bindtap="BackIndex"><text>取消</text></view>
+  </view>
+</view>

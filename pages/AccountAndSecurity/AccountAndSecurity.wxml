@@ -1,0 +1,10 @@
+<view class="SettingLineBox1">
+	<view class="SettingLine" >
+		<text class="text">手机号</text>
+		<text class="text2">134****1111</text>
+	</view>
+	<view class="SettingLine" bindtap="GoToResetPassword">
+		<text class="text">重置登录密码</text>
+		<image src="../../images/ic_more.png" mode="" class="img_more"></image>
+	</view>
+</view>

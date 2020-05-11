@@ -1,0 +1,168 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+.SettingLineBox1,.SettingLineBox2,.SettingLineBox3{
+	width: 100%;
+	background:#FFFFFF ;
+}
+.SettingLineBox1 .SettingLine{
+	height: 95rpx;
+	margin-left:20rpx;
+	box-sizing: border-box;
+  border-bottom: 1rpx solid #EBEBEB;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.SettingLineBox1 .SettingLine:last-child{
+	border-bottom: none;
+}
+.SettingLineBox1 .SettingLine .text{
+	position: absolute;
+	left:0;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.SettingLineBox1 .SettingLine .text2{
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	position: absolute;
+	right:47rpx;
+}
+.SettingLineBox1 .SettingLine .img_more{
+	width: 15rpx;
+	height: 28rpx;
+	position: absolute;
+	right:21rpx;
+}
+.SettingLineBox1 .SettingLine .switch_imgbox_closed{
+	position: absolute;
+	width: 80rpx;
+	height: 57rpx;
+	right:20rpx;
+}
+
+
+
+
+.SettingLineBox2 .SettingLine{
+	height: 95rpx;
+	margin-left:20rpx;
+	box-sizing: border-box;
+	border-bottom: 1rpx solid #EBEBEB;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.SettingLineBox2 .SettingLine:last-child{
+		border-bottom: none;
+}
+.SettingLineBox2 .SettingLine .text{
+	position: absolute;
+	left:0;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.SettingLineBox2 .SettingLine .text2{
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	position: absolute;
+	right:47rpx;
+}
+.SettingLineBox2 .SettingLine .img_more{
+	width: 15rpx;
+	height: 28rpx;
+	position: absolute;
+	right:21rpx;
+}
+.SettingLineBox2 .SettingLine .switch_imgbox_closed{
+	position: absolute;
+	width: 80rpx;
+	height: 57rpx;
+	right:20rpx;
+}
+
+
+
+.SettingLineBox3 .SettingLine{
+	height: 95rpx;
+	margin-left:20rpx;
+	box-sizing: border-box;
+	border-bottom: 1rpx solid #EBEBEB;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.SettingLineBox3 .SettingLine:last-child{
+		border-bottom: none;
+}
+.SettingLineBox3 .SettingLine .text{
+	position: absolute;
+	left:0;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.SettingLineBox3 .SettingLine .text2{
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	position: absolute;
+	right:47rpx;
+}
+.SettingLineBox3 .SettingLine .img_more{
+	width: 15rpx;
+	height: 28rpx;
+	position: absolute;
+	right:21rpx;
+}
+.SettingLineBox3 .SettingLine .switch_imgbox_openning{
+	position: absolute;
+  right: 0;
+}
+.SettingLineBox3 .SettingLine .switch_imgbox_closed{
+	position: absolute;
+	width: 80rpx;
+	height: 57rpx;
+	right:20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.SettingLineBox1{
+	margin-top: 10rpx;
+}
+.SettingLineBox2{
+	height: 95rpx;
+	margin-top: 10rpx;
+}
+.SettingLineBox3{
+	margin-top: 10rpx;
+}
+.LoginOut{
+		width:710rpx;
+		height:80rpx;
+		line-height: 80rpx;
+		text-align: center;
+		background:rgba(53,152,165,1);
+		border-radius:6rpx;
+		margin: 65rpx 20rpx 0;
+		font-size:32rpx;
+		font-family:PingFang SC;
+		font-weight:500;
+		color:rgba(255,255,255,1);
+}

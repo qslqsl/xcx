@@ -1,0 +1,31 @@
+<view class="SettingLineBox1">
+	<view class="SettingLine" bindtap="GoToUserInfoSetting">
+		<text class="text">个人信息设置</text>
+		<image src="../../images/ic_more.png" class="img_more"></image>
+	</view>
+	<view class="SettingLine" bindtap="GoToAccountAndSecurity">
+		<text class="text">账号与安全</text>
+		<image src="../../images/ic_more.png" class="img_more"></image>
+	</view>
+</view>
+	
+<view class="SettingLineBox3">
+	<view class="SettingLine">
+		<text class="text">推送消息设置</text>
+		<switch style="transform:scale(0.65)" class="switch_imgbox_openning"/>
+	</view>
+	<view class="SettingLine">
+		<text class="text">清理缓存</text>
+		<text class="text2">{{CacheSize}}</text>
+		<image src="../../images/ic_more.png" class="img_more"></image>
+	</view>
+</view>
+<view class="SettingLineBox2" bindtap="GoToAboutXTC">
+	<view class="SettingLine">
+		<text class="text">关于XTC</text>
+		<image src="../../images/ic_more.png" class="img_more"></image>
+	</view>
+</view>
+<view class="LoginOut">
+			退出登录
+</view>

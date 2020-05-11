@@ -1,0 +1,82 @@
+<!-- 自定义顶部导航栏 -->
+<view class="customtwo flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="cen-box">
+    <view class="backimgbox" bindtap="backTabBar">
+      <image src="../../images/white_hint.png" class="backimg"></image>
+    </view>
+    <text>登录</text>
+    <view class="right"></view>
+  </view>
+</view>
+<view class="empty_customtwo" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="container">
+  <image src="../../images/headimg/bg_login.png" style="width:100%;height:100vh;position:absolute;top:0;left:0;background-size:cover;"></image>
+  <view class="greenback">
+    <image src="../../images/headimg/logo.png"></image>
+    <view class="XTC">
+      <text>小天才</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="phoneNumber">
+      <text catchtap="clickme">+{{CountryNumberValue}}</text>
+      <input type="number" class="" placeholder="请输入手机号码" placeholder-class="placeholder_style" value="{{userphone}}" bindblur="phone" />
+    </view>
+  </view>
+
+  <!--屏幕背景变暗的背景  -->
+  <!-- <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view> -->
+  <!--弹出框  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <scroll-view class="flex-wrap" enable-flex="true">
+      <scroll-view class="flex-left" scroll-y="true" scroll-into-view="{{scrollIntoId}}" enable-flex="true">
+        <view wx:for="{{groups}}" wx:key="zimu" wx:for-item="zimu" id="{{index}}" bindtap="bbbb">
+          <view class="item item-a" id="{{zimu.groupName}}">{{zimu.groupName}}</view>
+          <view class="item" wx:for="{{zimu.users}}" wx:key="users" wx:for-item="users" id="{{index}}" bindtap="aaaa">{{users.name}}</view>
+        </view>
+      </scroll-view>
+      <view class="flex-right">
+        <view class="zimulist" bindtouchmove="touchmovefn" bindtouchstart="touchstartfn">
+          <view class="zimu" wx:for="{{zimu}}" wx:key="index" data-id="{{item}}">{{item}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+
+
+  <view class="content-two">
+    <view class="ImageCodeBox">
+      <input type="text" class="ImageCode" placeholder="请输入图片验证码" placeholder-class="placeholder_style" value="{{userImgCode}}" bindblur="ImgCode" />
+      <view>
+        <image src="../../images/headimg/ic_code.png" mode="" class="ImageCodeStyle"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="content-three">
+    <view class="GetVerificationCode">
+      <input type="text" class="Code" placeholder="请输入短信验证码" value="{{userCode}}" bindblur="Code" />
+      <view class="VerificationCode" catchtap="sendmessg">
+        <text>|</text>
+        <text class="{{sendmsg}}">{{getmsg}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="denglu-Btn" catchtap="GoToindex">
+    <text>登录</text>
+  </view>
+  <view class="zhuce-Btn" catchtap="GoToRegistrationPage">
+    <text>没有账号？ 去注册！</text>
+  </view>
+
+  <view class="xieyi">
+    <text class="denglu-font">登录即代表同意</text>
+    <text class="denglu-xieyi">《XTC用户协议》</text>
+  </view>
+
+</view>

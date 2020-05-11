@@ -1,0 +1,22 @@
+<view class="wowdas">
+	<view class="dsaads">
+		<image src="../../images/headimg/logo.png" class="tupian"></image>
+	</view>
+	<view class="txxxt">
+		<text class="text3">版本号 1.0.0</text>
+	</view>
+	<view class="hhsadsa">
+		<view class="ContentBoxLine" >
+			<text class="text">去评分</text>
+			<image src="../../images/ic_more.png" class="img_more"></image>
+	  </view>
+		<view class="ContentBoxLine">
+			<text class="text">版本更新</text>
+			<image src="../../images/ic_more.png" class="img_more"></image>
+		</view>
+		<view class="ContentBoxLine" id="shaj2">
+			<text class="text">隐私权政策</text>
+			<image src="../../images/ic_more.png" class="img_more"></image>
+		</view>
+	</view>
+</view>

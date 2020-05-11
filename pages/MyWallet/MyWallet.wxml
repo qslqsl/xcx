@@ -1,0 +1,106 @@
+<view class="container-con">
+    <view class="TapBar" wx:for="{{item}}" wx:key="index">
+     <text bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'on':''}}">{{item.Aone}}</text>
+     <text bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'on':''}}">{{item.Atwo}}</text>
+    </view>
+</view>
+
+
+    <!-- 订阅支出 -->
+    <view class="SubcriseExpenditure" wx:if="{{navState==0}}">
+		  <view wx:for="{{searchArray}}" wx:for-item="item" wx:key=""> 
+				<view class="hhadas" bindtap='showList' id='{{item.id}}'>
+					<view class="hhadas2">
+						<image src="../../images/headimg/pic_Headportrait3.png" class="tupian"></image>
+					</view>
+					<view class="hhadas3">
+						<text class="txtx">{{item.name}}</text>
+						<text class="txtx2">{{item.time}}</text>
+					</view>
+					<view class="hhadas4">
+						<text class="txtx1">{{item.money}}</text>
+						<text class="txtx2a">支付金额</text>
+					</view>
+				</view>
+				<view class="box" class=" {{ahide==item.id?'':'hide'}}">
+          <view class="asdsada ys" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+            <view class="asdsad2">
+              <text class="txxt12">{{child.dsada}}</text>
+              <text class="txxt21">{{child.dsadb}}</text>
+            </view>
+            <view class="asdsad3">
+              <text class="txxt31">{{child.dsadc}}</text>
+              <text class="txxt14">{{child.dsadd}}</text>
+            </view>
+          </view>
+          <view class="asdsad ys" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+            <view class="asdsad2">
+              <text class="txxt12">{{child.dsade}}</text>
+              <text class="txxt22">{{child.dsadf}}</text>
+            </view>
+            <view class="asdsad3">
+              <text class="txxt33">{{child.dsadg}}</text>
+              <text class="txxt44">{{child.dsadh}}</text>
+            </view>
+          </view>
+          <view class="asdsadd ys" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+            <view class="asdsad2">
+              <text class="txxt12">{{child.dsadj}}</text>
+              <text class="txxt222">{{child.dsadk}}</text>
+            </view>
+            <view class="asdsad3">
+              <text class="txxt333">{{child.dsadl}}</text>
+              <text class="txxt444">{{child.dsadp}}</text>
+            </view>
+          </view>
+			  </view>
+			</view>
+	  </view>
+
+
+
+
+
+<!-- 提取支出 -->
+	   <view class="ExtractExpenditure" wx:if="{{navState==1}}">
+	       <view wx:for="{{searchArraytwo}}" wx:for-item="item" wx:key="">
+	   	    <view class="hhadas" bindtap='showListtwo' id='{{item.id}}'> 
+	   				<view class="hhadas3">
+	   					<text class="txte">{{item.yinghang}}</text>
+	   					<text class="txtx2">{{item.kahao}}</text>
+	   				</view>
+	   				<view class="hhadas4">
+	   					<text class="txtx1">{{item.money}}</text>
+	   					<text class="txtx2a">支付金额</text>
+	   				</view>
+	   			</view>
+	   			<view class="box" class=" {{bhide==item.id?'':'hide'}}">
+	   			<view class="asdsada ys" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+	   					<view class="asdsad2">
+	   						<text class="txxt122">{{childtwo.abasd}}</text>
+	   						<text class="txxt211">{{childtwo.abase}}</text>
+	   					</view>
+	   					<view class="asdsad3">
+	   						<text class="txxt311">{{childtwo.abasf}}</text>
+	   						<text class="txxt141">{{childtwo.abasg}}</text>
+	   					</view>
+	   			</view>
+	   			<view class="asdsad ys" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+	   				<view class="asdsad2">
+	   					<text class="txxt121">{{childtwo.abash}}</text>
+	   					<text class="txxt221">{{childtwo.abasj}}</text>
+	   				</view>
+	   				<view class="asdsad3">
+	   					<text class="txxt331">{{childtwo.abask}}</text>
+	   					<text class="txxt441">{{childtwo.abasl}}</text>
+	   				</view>
+	   			</view>
+	   			<view class="asdsadd ys" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+	   				<view class="asdsad2">
+	   					<text class="txxt121">{{childtwo.abasp}}</text>
+	   					<text class="txxt2221">{{childtwo.abaso}}</text>
+	   				</view>
+	   		    </view>
+	   		</view>
+	   	   </view>
+	   </view>

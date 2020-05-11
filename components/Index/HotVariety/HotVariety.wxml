@@ -1,0 +1,48 @@
+<view>
+  <!-- 首页的  热门品种部分 -->
+  <view class="HotVariety">
+    <view class="HotVarietyTitle clearfix" wx:if="TypeObj=='Index'" catchtap="GoToHotVariety">
+      <text class="FollowBigShotText">热门品种</text>
+      <image src="../../../images/mine_more.png" class="ImgMore"></image>
+    </view>
+    <view class="HotVarietyLine" wx:for="{{HotVarietyDataList}}" wx:key="index">
+      <view class="TradeStarsContentLineLeft">
+        <image src="../../../images/headimg/pic_HotKinds.png" class="TradeStarsHeadingImg" lazy-load></image>
+      </view>
+      <view class="TradeStarsContentLineRightBox">
+        <view class="HotVarietyRight">
+          <view class="TextBox">
+            <view class="TextBoxLeft">
+              <text class="Text1">{{ item.OptionalName }}</text>
+              <text class="Text2">{{ item.FocusAccount }}人关注</text>
+            </view>
+            <view class="TextBoxRight" catchtap="followed" id="{{index}}">
+              <view  wx:if="{{item.OptionalStatus==1}}">已自选</view>
+              <view  wx:if="{{item.OptionalStatus==0}}">+自选</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+  <!--关注-已关注-弹窗 -->
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <!-- 弹出层 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="tcmax-box">
+      <view class="box-top">
+        <text>提示</text>
+        <text>{{contentgz}}</text>
+      </view>
+      <view class="box-bottom">
+        <view class="box-qx" catchtap="boxqx">
+          <text>取消</text>
+        </view>
+        <view class="box-qr" catchtap="boxqr">
+          <text>确认</text>
+        </view>
+      </view>
+    </view>
+  </view>

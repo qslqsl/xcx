@@ -1,0 +1,30 @@
+<!-- 自定义顶部导航栏 -->
+<view class="customtwo flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="cen-box">
+    <view class="left"></view>
+    <text>填写昵称</text>
+    <view class="right"></view>
+  </view>
+</view>
+<view class="empty_customtwo" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="content">
+  <view class="TextBox">
+    <view class="Text1">
+      填写昵称
+    </view>
+    <view class="Text2">
+      好听的昵称会让人更加印象深刻哦~
+    </view>
+    <input type="text" class="!UnderLineStatus?'Text3 NoActiveUnderLine':'Text3 ActiveUnderLine'" maxlength="8" />
+    <view class="NumberAcount">
+      {{8}}
+    </view>
+  </view>
+
+</view>
+
+<view class="successbtn" bindtap="successbtn">
+  <text>完成</text>
+</view>

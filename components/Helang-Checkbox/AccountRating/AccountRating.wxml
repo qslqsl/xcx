@@ -1,0 +1,18 @@
+
+
+
+<view class="MaxContainer">
+  <view class="MainContent">
+      <view class="bb {{item.checked?'ys':''}}"  wx:for="{{AccountRatingList}}" wx:key="" data-id="{{index}}" bindtap="zhpj" >
+        <text class="{{item.checked?'ystwo':''}}">{{item.ratingone}}</text>
+      </view>
+      <!-- <text>{{item.ratingtwo}}</text>
+      <text>{{item.ratingthree}}</text>
+      <text>{{item.ratingfour}}</text>
+      <text>{{item.ratingfive}}</text>
+      <text>{{item.ratingsix}}</text>
+      <text>{{item.ratingseven}}</text>
+      <text>{{item.ratingeight}}</text> -->
+  </view>
+  <text class="underLine"></text>
+</view>

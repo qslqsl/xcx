@@ -1,0 +1,88 @@
+<view class="content">
+  <view class="abcd">
+    <text class="text">以下设置将适用于您的所有跟随方/交易员账户</text>
+  </view>
+  <view>
+    <view class="abcde">
+      <view class="abcde1">
+        <view class="abcdee">
+          <text class="text2">快速下单</text>
+          <switch color="#00E266" style="transform:scale(0.65)" />
+        </view>
+        <view class="abcdee">
+          <text class="text">当账户净值低于保护值时将平仓所有订单（自主+跟随）并关闭跟随下单功能</text>
+        </view>
+      </view>
+      <view class="abcde2">
+        <view class="abcdee">
+          <text class="text2">快速平仓</text>
+          <switch color="#00E266" style="transform:scale(0.65)" />
+        </view>
+        <view class="abcdee">
+          <text class="text">下单时，默认弹出确认下单提示，确认后下单成功；若您同意《免责声明》，下单时将不再弹出确认提示，快速平仓。</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="con-one">
+    <view class="one-top">
+      <view class="one-text">
+        <text>跟随开仓</text>
+        <text>手数不足品种最小值时</text>
+      </view>
+      <view class="one-Btn">
+        <text catchtap="qb" data-index="0" class="{{nostate==0?'bg-color':'no-ba-color'}}">取最小值</text>
+        <text catchtap="qb" data-index="1" class="{{nostate==1?'bg-color':'no-ba-color'}}">不开仓</text>
+      </view>
+    </view>
+    <view class="detail-text">
+      <text class="derail-font">如：交易员下了0.01手，跟随比例是0.1倍，按比例算出来的跟单手数是：0.01*0.1=0.001手，由于经纪商限制此品种最小手数是0.01手,<text class="detail-colorfont" wx:if="{{nostate==1?'show':''}}">此时不跟随开仓</text><text wx:if="{{nostate==0?'show':''}}">当<text class="detail-colorfont">取小值</text>实际跟单手数是<text class="detail-colorfont">0.01手</text></text>
+      </text>
+
+    </view>
+  </view>
+
+
+
+  <view class="con-two">
+    <view class="two-top">
+      <view class="two-text">
+        <text>跟随开仓</text>
+        <text>手数大于品种最小值，但手数位数大于经纪商限制时</text>
+      </view>
+      <view class="two-Btn">
+        <text catchtap="dx" data-index="0" class="{{dxstate==0?'bg-color':'no-ba-color'}}">取小</text>
+        <text catchtap="dx" data-index="1" class="{{dxstate==1?'bg-color':'no-ba-color'}}">取大</text>
+      </view>
+    </view>
+    <view class="detail-text">
+      <text class="derail-font">如：交易员下了1.55手，跟随比例是0.1倍，按比例算出来的跟单手数是：1.55*0.1=0.155手，由于经纪商限制此品种最小手数是0.01手,当<text class="detail-colorfont" wx:if="{{dxstate==0?'show':''}}">取小值</text><text class="detail-colorfont" wx:if="{{dxstate==1?'show':''}}">取大值</text>时实际跟单手数是<text class="detail-colorfont" wx:if="{{dxstate==0?'show':''}}">0.15手</text><text class="detail-colorfont" wx:if="{{dxstate==1?'show':''}}">0.16手</text>
+      </text>
+    </view>
+  </view>
+
+
+  <view class="con-three">
+    <view class="three-top">
+      <view class="three-text">
+        <text>跟随部分开仓</text>
+        <text>手数小位数大于经纪商限制时</text>
+      </view>
+      <view class="three-Btn">
+        <text catchtap="qq" data-index="0" class="{{qqstate==0?'bg-color':'no-ba-color'}}">取小</text>
+        <text catchtap="qq" data-index="1" class="{{qqstate==1?'bg-color':'no-ba-color'}}">取大</text>
+      </view>
+    </view>
+    <view class="detail-text">
+      <text class="derail-font">如：交易员下了1.55手，跟随者对应的订单手数是0.1手，当交易员部分平掉0.5手时，按比例算出来的跟随平仓手数是：（0.5/1.55） *0.1=0.03225手。由于经纪商限制了最小手数0.01手，当<text class="detail-colorfont" wx:if="{{qqstate==0?'show':''}}">取小值</text><text class="detail-colorfont" wx:if="{{qqstate==1?'show':''}}">取大值</text>时实际跟单手数是<text class="detail-colorfont" wx:if="{{qqstate==0?'show':''}}">0.03手</text><text class="detail-colorfont" wx:if="{{qqstate==1?'show':''}}">0.04手</text>
+      
+      </text>
+    </view>
+  </view>
+
+
+  <view class="bottom">
+    <text>{{font}}</text>
+  </view>
+</view>

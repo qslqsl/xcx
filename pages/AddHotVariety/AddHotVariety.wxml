@@ -1,0 +1,87 @@
+<view class="SearchContainer">
+  <view class="SearchContent">
+    <view class="Scontent" bindtap="GoToAddVarietySearch">
+      <image src="../../images/ic_reasch@2x.png" class="searchImg"></image>
+      <input type="text" placeholder="搜索品种" class="SearchName"></input>
+    </view>
+  </view>
+</view>
+
+<view class="mychoose">
+  <view class="mybox">
+    <view>
+      <view>我的自选</view>
+    </view>
+    <view>
+      <view>点击删除/长按拖拽顺序</view>
+    </view>
+  </view>
+
+  <!-- <view class="mybox-two">
+    <view class="Max">
+      <view class="mybox-two-con" wx:for="{{FloorOneList}}" wx:key="index">
+        <view>
+          <text>{{item.letter}}</text>
+          <text>{{item.font}}</text>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <movable-area class="mybox-two">
+
+    <view class="Max">
+      <view wx:for="{{data}}" wx:key="index" class="bbbb" id="{{item.index}}" data-index='{{index}}' bindlongpress='_longtap' bindtouchstart='touchs' bindtouchend='touchend' bindtouchmove='touchm' bindtap="objectMovetwo">
+        <text>{{item.letter}}</text>
+        <text>{{item.font}}</text>
+      </view>
+    </view>
+
+    <movable-view x="{{x}}" y="{{y}}" direction="all" damping="{{5000}}" friction="{{1}}" disabled="{{disabled}}">
+      <view class='item-move' hidden='{{hidden}}'>
+      </view>
+    </movable-view>
+    
+  </movable-area>
+
+
+
+</view>
+
+
+<view class="ChangWai">
+  <view class="CWtabbar">
+    <text bindtap="CWnavSwitch" data-index="0" class="{{CWnavState==0?'on':''}}">常用</text>
+    <text bindtap="CWnavSwitch" data-index="1" class="{{CWnavState==1?'on':''}}">外汇</text>
+  </view>
+</view>
+
+<view class="CW-ConBox" wx:if="{{CWnavState==1}}">
+  <view class="MaxTwo">
+
+    <!-- <view class="CW-Con" wx:for="{{floors_list}}" wx:key="index">
+      <view>
+        <text>{{item.lettertwo}}</text>
+        <text>{{item.fonttwo}}</text>
+      </view>
+    </view> -->
+    <view class="CW-Con">
+      <view wx:for="{{datatwo}}" wx:key="index" data-index='{{index}}' id="{{item.index}}" bindtap="qwer">
+        <text>{{item.letter}}</text>
+        <text>{{item.font}}</text>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<view class="CommonlyUsed" wx:if="{{CWnavState==0}}">
+  <view class="MaxThree">
+    <view class="CommonlyUsed-Con" wx:for="{{floors_list2}}" wx:key="index">
+      <view>
+        <text>{{item.letterThree}}</text>
+        <text>{{item.fontThree}}</text>
+      </view>
+    </view>
+  </view>
+</view>

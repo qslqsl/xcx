@@ -1,0 +1,57 @@
+/* 自定义顶部导航栏样式 */
+.custom{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background-color: #fff;
+  z-index: 999;
+}
+.custom text{
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+}
+
+.empty_custom{
+  height: 45px;
+  width: 100%;
+}
+
+
+
+/* 自定义底部导航栏样式 */
+.tabbarBox{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  background: #fff;
+  border-top: 1px solid rgb(213, 213, 213);
+  display: flex;
+  justify-content: space-around;
+}
+.tabbarview{
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 24rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.tabbarview image{
+  width: 60rpx;
+  height: 45rpx;
+}
+.tabbarview text{
+  display: block;
+}
+.active{
+  color: #3598A5 !important;
+}
+.color{
+  color: #000 !important;
+}
+
+ 

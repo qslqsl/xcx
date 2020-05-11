@@ -1,0 +1,33 @@
+<view class="TradeStars">
+		<view class="TradeStarsTitle clearfix" bindtap="GoToTradeStars">
+			<text class="TradeStarsText">交易明星</text>
+			<image src="../../../images/mine_more.png" class="ImgMore"></image>
+		</view>
+		<view class="TradeStarsContentLine" wx:for="{{TradeStarsDataList}}" wx:key="index" bindtap="GoToHisTradeStars">
+			<!-- 去他人账户  默认展示  信号方账户 信息 -->
+			<view class="TradeStarsContentLineLeft">
+				<image src="{{item.imgurl}}" class="TradeStarsHeadingImg" lazy-load></image>
+			</view>
+			<view class="TradeStarsContentLineRightBox" >
+				<view class="TradeStarsContentLineRight">
+					<view class="TextBox">
+						<text class="TradeUsername">{{item.username}}</text>
+						<text class="TradeAccountMumber">@{{item.accountnumner}}</text>
+						<view class="TradeLevel">
+							黄金
+						</view>
+						<view class="yields2value">
+							{{item.shouyilv}}
+						</view>
+					</view>
+					<view class="TextBox">
+						<view class="ThreeteenMaximum">近13周最大回撤：{{item.maxhuichelv}}</view>
+						<view class="yields2">收益率</view>
+					</view>
+					<view class="TextBox">
+						<view class="pricemonth">价格：￥{{item.pricemonth}}/月</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>

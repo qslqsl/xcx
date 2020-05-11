@@ -1,0 +1,2049 @@
+<!-- 自定义顶部导航栏 -->
+<view class="customtwo flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="backimgbox" bindtap="backTabBar">
+    <image src="../../images/white_hint.png" class="backimg"></image>
+  </view>
+</view>
+<view class="empty_customtwo" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="container">
+  <view class="con-back">
+    <image src="../../images/headimg/bg_HisAccountInfo.png" style="width:100%;height:440rpx;position:absolute;top:0;left:0;background-size:cover;"></image>
+
+    <view class="con-Info">
+      <image src="../../images/headimg/pic_headimg.png" class="userhead"></image>
+      <view class="userInfo">
+        <text>淡墨无殇</text>
+        <image src="../../images/ic_boy@2x.png"></image>
+      </view>
+      <view class="FansFollow">
+        <text catchtap="GoToFocus">关注</text>
+        <text catchtap="GoToFocus">55</text>
+        <text>|</text>
+        <text catchtap="GoToFans">粉丝</text>
+        <text catchtap="GoToFans">15</text>
+      </view>
+      <view class="qmbox">
+        <text class="autograph">个性签名：欢迎来到XTC，大家一起赚钱啊</text>
+        <image src="../../images/edit@2x.png" class="qianmingimg"></image>
+      </view>
+    </view>
+    <view class="follow">
+      <text>+关注</text>
+    </view>
+  </view>
+
+  <view class="container-con">
+    <view class="TapBar" wx:for="{{item}}" wx:key="index">
+      <text bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'on':''}}">{{item.Aone}}</text>
+      <text bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'on':''}}">{{item.Atwo}}</text>
+    </view>
+  </view>
+
+
+</view>
+
+
+
+
+<!-- 他人 交易账户内容 -->
+<view class="container-Two" wx:if="{{navState==0}}">
+  <view class="content">
+    <view class="con-one" catchtap="clickmetwo">
+      <view>@1 2143443735</view>
+      <image src="../../images/TradeAccount/TradeAccountDown@2x.png" mode="" class="ImgDown1"></image>
+    </view>
+
+    <!--屏幕背景变暗的背景  -->
+    <view class="commodity_screen2" catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationDatatwo}}" class="commodity_attr_box2" wx:if="{{showModalStatustwo}}">
+      <view class="zhanghu">
+        <text>选择其他账户</text>
+      </view>
+      <view class="hengxian"></view>
+      <view catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}" data-index="0">
+        <view class="qone">
+          <view class="numone">
+            <text>@1</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">青铜</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstate==0?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="hengxian mar"></view>
+      <view catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}" data-index="1">
+        <view class="qone">
+          <view class="numone">
+            <text>@2</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">钻石</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstate==1?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="hengxian mar"></view>
+      <view catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}" data-index="2">
+        <view class="qone">
+          <view class="numone">
+            <text>@3</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">黄金</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstate==2?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="boldhengxian"></view>
+      <view class="quxiao" catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}">取消</view>
+    </view>
+
+
+
+
+    <view class="con-two">
+      <view class="one">
+        <text>交易员</text>
+      </view>
+      <view class="two">
+        <text>GoldwellCapital</text>
+      </view>
+    </view>
+
+    <view class="con-three" catchtap="clickme">
+      <view class="three-one">
+        <text>钻石</text>
+      </view>
+      <view class="three-two">
+        <view>账户评级：钻石</view>
+        <view>稳健性0.0、风控能力0.0、资金规模0.0、非...</view>
+      </view>
+      <image src="../../images/TradeAccount/TradeAccountRight@2x.png" class="ImageRight"></image>
+    </view>
+
+
+    <view class="commodity_screen" catchtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+      <view class="tcone">
+        <text></text>
+        <text class="pingji">账户评级</text>
+        <view class="guanbi">
+          <image src="../../images/ic_pop_close@2x.png" catchtap="hideModal" wx:if="{{showModalStatus}}"></image>
+        </view>
+      </view>
+      <view class="hengxian"></view>
+      <view class="tctwo">
+        <image src="../../images/ic_userlevel@2x.png"></image>
+        <text>依据近13周交易数据，通过盈利能力、稳健性、风控能力非侥幸获利、资金规模多项指标，对交易员进行科学评估进行线性回归后，加权得分得出对应的分数，依据分数划分不同的账户评级，每日更新。</text>
+      </view>
+    </view>
+
+
+
+
+    <view class="con-four" catchtap="GoToTransactionDataSurvey">
+      <view class="four-one">
+        <text class="four-font">收益率</text>
+        <text class="greencolor">233.34%</text>
+        <text class="four-font">交易周期</text>
+        <text class="four-num">1周</text>
+      </view>
+      <view class="four-two">
+        <text class="four-font">跟随收益</text>
+        <text class="four-num">￥7,7671.73</text>
+        <text class="four-font">实盘跟随总额</text>
+        <text class="four-num">￥7,7671.73</text>
+      </view>
+      <view class="four-three">
+        <text class="four-font">净值最大回撤率</text>
+        <text class="four-num">0.00%</text>
+        <text class="four-font">累计订阅次数</text>
+        <text class="four-num">23</text>
+      </view>
+      <view class="four-four">
+        <image src="../../images/TradeAccount/TradeAccountRight@2x.png"></image>
+      </view>
+    </view>
+
+
+    <view class="con-five">
+      <view class="font">
+        <text class='num'> <text class="five-font">交易策略：</text>寻找市场情绪高涨，或达到强烈阻力位的货币对，适机开仓，期间存在价位调整，追涨杀跌，平手保护等操作，...</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="con-con">
+    <view class="con-bar" wx:for="{{itemtwo}}" wx:key="index">
+      <text catchtap="navSwitchtwo" data-index="0" class="{{navStatetwo==0 ? 'ontwo':''}}">{{item.Aonetwo}}</text>
+      <text catchtap="navSwitchtwo" data-index="1" class="{{navStatetwo==1 ? 'ontwo':''}}">{{item.Atwotwo}}</text>
+      <text catchtap="navSwitchtwo" data-index="2" class="{{navStatetwo==2 ? 'ontwo':''}}">{{item.Athreetwo}}</text>
+    </view>
+
+
+    <!-- 交易账户（交易分析） -->
+    <view class="fenxi" wx:if="{{navStatetwo==0}}">
+      <view class="con-time">
+        <text>上次更新时间2019/09/19 17:21(GMT+8:00)</text>
+      </view>
+
+      <view class="echarts-box">
+
+        <view class="line-box">
+          <text class="linefont">收益</text>
+          <view class="linetopone" bindtap="syjyn">
+            <text>{{jynfont}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+          <view class="linetoptwo" bindtap="syr">
+            <text>{{rfont}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- line图表组件 -->
+        <line></line>
+        <view class="bottom-line"></view>
+
+        <!-- 近一年-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenJYN" bindtap="hideModalJ" wx:if="{{showModalStatusJ}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataJ}}" class="commodity_attr_boxJYN" wx:if="{{showModalStatusJ}}">
+
+          <view wx:for="{{jyn}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="jynevent" class="{{jynfontstate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalJ">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!-- 日-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalR" wx:if="{{showModalStatusR}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataR}}" class="commodity_attr_boxR" wx:if="{{showModalStatusR}}">
+
+          <view wx:for="{{r}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="revent" class="{{rfontstate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalR">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+
+
+
+
+        <view class="line-box">
+          <text class="linefont">净值/余额</text>
+          <view class="linetwotop" bindtap="jzyejyn">
+            <text>{{jyntfont}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- linetwo图表组件 -->
+        <linetwo></linetwo>
+        <view class="bottom-line"></view>
+
+        <!-- 近一年弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenJYN" bindtap="hideModalJT" wx:if="{{showModalStatusJT}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataJT}}" class="commodity_attr_boxJYN" wx:if="{{showModalStatusJT}}">
+
+          <view wx:for="{{jynt}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="jyntevent" class="{{jyntfontstate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalJT">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <view class="line-box">
+          <text class="linefont">月份报告分析</text>
+        </view>
+        <!-- column图表组件 -->
+        <colume></colume>
+        <view class="bottom-line"></view>
+
+
+        <view class="line-box">
+          <text class="linefont">盈亏分析</text>
+          <view class="linetopone" bindtap="pcsj">
+            <text>{{pcsjfont}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+          <view class="linetoptwo-three" bindtap="xs">
+            <text>{{xsfont}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- area图表组件 -->
+        <area></area>
+        <view class="bottom-line"></view>
+
+
+        <!-- 平仓时间-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalPCSJ" wx:if="{{showModalStatusPCSJ}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataPCSJ}}" class="commodity_attr_boxR" wx:if="{{showModalStatusPCSJ}}">
+
+          <view wx:for="{{pcsj}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="pcsjevent" class="{{pcsjfontstate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalPCSJ">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+        <!-- 小时-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalXS" wx:if="{{showModalStatusXS}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataXS}}" class="commodity_attr_boxR" wx:if="{{showModalStatusXS}}">
+
+          <view wx:for="{{xs}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="xsevent" class="{{xsfontstate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalXS">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+        <view class="line-box">
+          <text class="linefont">持仓时间</text>
+        </view>
+        <!-- areatwo图表组件 -->
+        <areatwo></areatwo>
+        <view class="bottom-linetwo"></view>
+
+
+        <view class="backback"></view>
+
+
+      </view>
+
+
+
+
+
+
+    </view>
+
+    <!-- 交易账户（交易订单） -->
+    <view class="dindan" wx:if="{{navStatetwo==1}}">
+      <view class="FuDongShouYi1}}">
+        <view class="TextLine">
+          <text>浮动收益</text>
+          <text>-￥250.25</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓手数</text>
+          <text>0.01标准手</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓仓位比例</text>
+          <text>0.03%</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓亏损比例</text>
+          <text>0.00%</text>
+        </view>
+      </view>
+
+      <!--交易订单 正在持仓和历史交易切换-->
+      <view class="OrderBar">
+        <view class="OrderBarCon">
+          <view bindtap="OrderNavSwitch" data-index="0" class="{{OrderNavState==0?'onthree zz':'zz'}}">
+            <text>正在持仓</text>
+          </view>
+          <view bindtap="OrderNavSwitch" data-index="1" class="{{OrderNavState==1?'onthree zz':'zz'}}">
+            <text>历史交易</text>
+          </view>
+        </view>
+        <view class="underLine"></view>
+      </view>
+
+      <!--交易订单 正在持仓页面 -->
+      <view class="OrderBarContainer" wx:if="{{OrderNavState==0}}">
+
+        <view class="OrderTopCon">
+          <view class="OrderTop">
+            <view class="OrderTopLeft">
+              <view class="OrderTopOne" catchtap="actionSheetTap">
+                <text>类型</text>
+                <text>|</text>
+                <text>{{menu}}</text>
+                <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+              </view>
+              <view class="OrderTopTwo" catchtap="actionSheetTaptwo">
+                <text>{{menutwo}}</text>
+                <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+              </view>
+            </view>
+            <view class="OrderTopRight">
+              <text>GMT+8:00</text>
+            </view>
+          </view>
+          <view class="UnderLineTwo"></view>
+        </view>
+
+        <!--交易订单 正在持仓 全部-弹窗 -->
+        <view class="commodity_screenqbqb" bindtap="hideModalqbqb" wx:if="{{showModalStatusqbqb}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataqbqb}}" class="commodity_attr_boxqbqb" wx:if="{{showModalStatusqbqb}}">
+          <view wx:for="{{actionSheetItems}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" class="" catchtap="qbevent" class="{{choosestate==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalqbqb">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 正在持仓 按最近开仓-弹窗 -->
+        <view class="commodity_screenAZJKC" bindtap="hideModalAZJKC" wx:if="{{showModalStatusAZJKC}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataAZJKC}}" class="commodity_attr_boxAZJKC" wx:if="{{showModalStatusAZJKC}}">
+          <view wx:for="{{actionSheetItemstwo}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="AZJKCevent" class="{{choosestateT==index?'AZJKCcon ys':'AZJKCcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="AZJKChengxian"></view>
+          <view class="AZJKCquxiao" bindtap="hideModalAZJKC">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 正在持仓的订单 -->
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view class="OrderingBox" wx:for="{{OrderingDataList}}" wx:for-item="item" wx:key="index">
+            <!--交易订单 正在持仓的订单  简要信息-->
+            <view class="OrderBoxContentLine" catchtap='showList' id='{{item.id}}'>
+              <view class="OrderBoxContentLineTop">
+                <view class="Left">
+                  <text class="Options">{{item.options}}</text>
+                  <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+                  <text class="StandHands">{{item.standhands}}</text>
+                  <text class="TextNormal">标准手</text>
+                </view>
+                <view class="Right">
+                  <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+                </view>
+              </view>
+
+              <view class="OrderBoxContentLineBottom">
+                <view class="Left">
+                  <text>{{item.optionsName}}</text>
+                  <view class="Range">
+                    <text>{{item.range1}}-</text>
+                    <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+                    <image src="{{item.img}}" class="IMG"></image>
+                  </view>
+                </view>
+                <view class="Right">
+                  {{item.pointNumber}}
+                </view>
+              </view>
+            </view>
+            <!--交易订单 正在持仓的订单  展开详情-->
+            <view class=" {{ahide==item.id?'ExpandOrderingBox':'hide'}}">
+
+              <view class="MaxBox">
+                <view class="ExpandOrderingBoxLeft" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+                  <view>
+                    <text>订单号</text>
+                    <text>{{child.ordernumber}}</text>
+                  </view>
+                  <view>
+                    <text>止损</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>止盈</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>交易员</text>
+                    <text>淡墨无殇 @1</text>
+                  </view>
+                </view>
+
+                <view class="ExpandOrderingBoxRight" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+                  <view>
+                    <text class="fys">开仓时间</text>
+                    <text>{{child.opentime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">手续费</text>
+                    <text>{{child.commission}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">经纪商手数</text>
+                    <text>{{child.jingjishangshoushu}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">利息</text>
+                    <text>{{child.rates}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+        </scroll-view>
+
+      </view>
+
+      <!--交易订单 历史交易页面 -->
+      <view class="HistoryTranstion" wx:if="{{OrderNavState==1}}">
+
+        <view class="TranstionBar">
+          <view class="TranstionBarCon">
+            <view class="TranstionConeOne" catchtap="actionSheetTapthree">
+              <text>{{menuthree}}</text>
+              <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+            </view>
+            <view class="TranstionConeTwo" catchtap="actionSheetTapfive">
+              <text>{{menufive}}</text>
+              <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+            </view>
+            <view class="TranstionTime">
+              <text>GMT+8:00</text>
+            </view>
+          </view>
+          <view class="underLine"></view>
+        </view>
+
+        <!--交易订单 历史交易 全部-弹窗 -->
+        <view class="commodity_screenlsqb" bindtap="hideModallsqb" wx:if="{{showModalStatuslsqb}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDatalsqb}}" class="commodity_attr_boxlsqb" wx:if="{{showModalStatuslsqb}}">
+          <view wx:for="{{actionSheetItemsthree}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="lsqbevent" class="{{choosestateThree==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="lsqbhengxian"></view>
+          <view class="lsqbquxiao" bindtap="hideModallsqb">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 历史交易 按最近-弹窗 -->
+        <view class="commodity_screenLSAZJPC" bindtap="hideModalLSAZJPC" wx:if="{{showModalStatusLSAZJPC}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataLSAZJPC}}" class="commodity_attr_boxLSAZJPC" wx:if="{{showModalStatusLSAZJPC}}">
+          <view wx:for="{{actionSheetItemsfive}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="lsazjpcevent" class="{{choosestatefour==index?'LSAZJPCcon ys':'LSAZJPCcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="LSAZJPChengxian"></view>
+          <view class="LSAZJPCquxiao" bindtap="hideModalLSAZJPC">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 历史交易的订单 -->
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view class="OrderingBox" wx:for="{{OrderedDataList}}" wx:for-item="item" wx:key="index">
+            <!--交易订单 历史交易的订单  简要信息-->
+            <view class="OrderBoxContentLine" catchtap='showListtwo' id='{{item.id}}'>
+              <view class="OrderBoxContentLineTop">
+                <view class="Left">
+                  <text class="Options">{{item.options}}</text>
+                  <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+                  <text class="StandHands">{{item.standhands}}</text>
+                  <text class="TextNormal">标准手</text>
+                </view>
+                <view class="Right">
+                  <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+                </view>
+              </view>
+
+              <view class="OrderBoxContentLineBottom">
+                <view class="Left">
+                  <text>{{item.optionsName}}</text>
+                  <view class="Range">
+                    <text>{{item.range1}}-</text>
+                    <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+                    <image src="{{item.img}}" class="IMG"></image>
+                  </view>
+                </view>
+                <view class="Right">
+                  {{item.pointNumber}}
+                </view>
+              </view>
+            </view>
+
+            <!--交易订单 历史交易的订单  展开详情-->
+            <view class="ExpandOrderingBox" class=" {{bhide==item.id?'ExpandOrderingBox':'hide'}}">
+              <image src="../../images/headimg/pic_order_expand_history.png" class="MaxImg"></image>
+
+              <view class="MaxBox">
+                <view class="ExpandOrderingBoxLeft" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+                  <view>
+                    <text>订单号</text>
+                    <text>{{childtwo.ordernumber}}</text>
+                  </view>
+                  <view>
+                    <text>止损</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>止盈</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>利息</text>
+                    <text>￥-0.95</text>
+                  </view>
+                  <view>
+                    <text>交易员</text>
+                    <text>淡墨无殇 @1</text>
+                  </view>
+                </view>
+
+                <view class="ExpandOrderingBoxRight" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+                  <view>
+                    <text class="fys">开仓平仓</text>
+                    <text>跟随平仓</text>
+                  </view>
+                  <view>
+                    <text class="fys">开仓时间</text>
+                    <text>{{childtwo.opentime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">平仓时间</text>
+                    <text>{{childtwo.closetime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">手续费</text>
+                    <text>{{childtwo.commission}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">经纪商手数</text>
+                    <text>{{childtwo.jingjishangshoushu}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+        </scroll-view>
+      </view>
+
+
+
+
+    </view>
+
+
+    <!-- 交易账户（订阅总览） -->
+    <view class="dinyue" wx:if="{{navStatetwo==2}}">
+
+      <!--订阅总览-->
+      <view class="OrderBar">
+        <view class="OrderBarCon">
+          <view bindtap="OrderNavSwitchtwo" data-index="0" class="{{OrderNavStatetwo==0?'onthree zz':'zz'}}">
+            <text>正在订阅</text>
+          </view>
+          <view bindtap="OrderNavSwitchtwo" data-index="1" class="{{OrderNavStatetwo==1?'onthree zz':'zz'}}">
+            <text>历史订阅</text>
+          </view>
+        </view>
+        <view class="underLine"></view>
+      </view>
+
+      <!-- 正在订阅 -->
+
+      <view class="SubcriseExpenditure" wx:if="{{OrderNavStatetwo==0}}">
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view wx:for="{{searchArraythree}}" wx:for-item="item" wx:key="">
+            <view class="hhadas" catchtap='showListthree' id='{{item.id}}'>
+              <view class="hhadas2">
+                <image src="../../images/headimg/pic_Headportrait3.png" class="tupian"></image>
+              </view>
+              <view class="hhadas3">
+                <text class="txtx">{{item.name}}</text>
+                <text class="txtx2">{{item.font}}</text>
+              </view>
+              <view class="NBFONT">
+                <text class="txtx1">{{item.money}}</text>
+                <text class="txtx2a">跟随收益</text>
+              </view>
+            </view>
+            <view class="box" class=" {{chide==item.id?'':'hide'}}">
+              <view class="asdsada" wx:for="{{item.childthree}}" wx:for-item="childthree" wx:key="">
+                <view class="box-img">
+                  <image src="/images/SubscribeEpxend2x.png"></image>
+                </view>
+                <view class="box-con">
+                  <view class="con-One">
+                    <text>{{childthree.one}}</text>
+                  </view>
+                  <view class="con-Two top">
+                    <text>跟随金额</text>
+                    <text>{{childthree.two}}</text>
+                  </view>
+                  <view class="con-Two">
+                    <text>跟随手数</text>
+                    <text>{{childthree.three}}</text>
+                  </view>
+                  <view class="con-Two">
+                    <text>跟随时间</text>
+                    <text>{{childthree.four}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+        </scroll-view>
+      </view>
+
+
+
+      <!-- 历史订阅 -->
+      <view class="SubcriseExpenditure" wx:if="{{OrderNavStatetwo==1}}">
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view wx:for="{{searchArrayfour}}" wx:for-item="item" wx:key="">
+            <view class="hhadas" catchtap='showListfour' id='{{item.id}}'>
+              <view class="hhadas2">
+                <image src="../../images/headimg/pic_Headportrait3.png" class="tupian"></image>
+              </view>
+              <view class="hhadas3">
+                <text class="txtx">{{item.name}}</text>
+                <text class="txtx2">{{item.font}}</text>
+              </view>
+              <view class="NBFONT">
+                <text class="txtx1">{{item.money}}</text>
+                <text class="txtx2a">跟随收益</text>
+              </view>
+            </view>
+            <view class="box" class=" {{dhide==item.id?'':'hide'}}">
+              <view class="asdsada" wx:for="{{item.childfour}}" wx:for-item="childfour" wx:key="">
+                <view class="box-img">
+                  <image src="/images/SubscribeEpxend2x.png"></image>
+                </view>
+                <view class="box-con">
+                  <view class="con-One">
+                    <text>{{childfour.one}}</text>
+                  </view>
+                  <view class="con-Two top">
+                    <text>跟随金额</text>
+                    <text>{{childfour.two}}</text>
+                  </view>
+                  <view class="con-Two">
+                    <text>跟随手数</text>
+                    <text>{{childfour.three}}</text>
+                  </view>
+                  <view class="con-Two">
+                    <text>跟随时间</text>
+                    <text>{{childfour.four}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+        </scroll-view>
+      </view>
+
+
+
+    </view>
+
+    <!-- 底部固定的订阅 -->
+    <view class="dinyuebox">
+      <text class="textcolor">￥29.99/月</text>
+      <view class="dinyuefont">
+        <text>订阅</text>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
+
+
+<!-- 他人 跟随账户 -->
+<view class="container-three" wx:if="{{navState==1}}">
+  <view class="content-three">
+    <view class="right-con-one" catchtap="clickmethree">
+      <view>@1 2143443735</view>
+      <image src="../../images/TradeAccount/TradeAccountDown@2x.png" class="right-ImgDown1"></image>
+    </view>
+
+    <!--屏幕背景变暗的背景  -->
+    <view class="commodity_screen2" catchtap="hideModalthree" wx:if="{{showModalStatusthree}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationDatathree}}" class="commodity_attr_box2" wx:if="{{showModalStatusthree}}">
+      <view class="zhanghu">
+        <text>选择其他账户</text>
+      </view>
+      <view class="hengxian"></view>
+      <view catchtap="hideModalthree" wx:if="{{showModalStatusthree}}" data-index="0">
+        <view class="qone">
+          <view class="numone">
+            <text>@1</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">青铜</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstatethree==0?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="hengxian mar"></view>
+      <view catchtap="hideModalthree" wx:if="{{showModalStatusthree}}" data-index="1">
+        <view class="qone">
+          <view class="numone">
+            <text>@2</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">钻石</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstatethree==1?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="hengxian mar"></view>
+      <view catchtap="hideModalthree" wx:if="{{showModalStatusthree}}" data-index="2">
+        <view class="qone">
+          <view class="numone">
+            <text>@3</text>
+            <text>2143443734 交易员</text>
+          </view>
+          <view class="qiongtong">黄金</view>
+        </view>
+        <view class="demo">
+          <text>FAM-Demo</text>
+          <image src="../../images/choose@2x.png" class="{{TCnavstatethree==2?'':'dis'}}"></image>
+        </view>
+        <view class="shouyi">
+          <text class="sy">浮动收益：<text class="numn">￥256.32</text></text>
+          <text class="sy">净值：<text class="numn">￥256.32</text></text>
+        </view>
+      </view>
+
+      <view class="boldhengxian"></view>
+      <view class="quxiao" catchtap="hideModalthree" wx:if="{{showModalStatusthree}}">取消</view>
+    </view>
+
+
+
+
+    <view class="right-con-two">
+      <view class="right-con-two-one">
+        <text>跟随者</text>
+      </view>
+      <view class="right-con-two-two">
+        <text>GoldwellCapital</text>
+      </view>
+    </view>
+
+    <view class="right-con-three" catchtap="GoToFollowDataSurvey">
+      <view class="right-con-three-one">
+        <text class="right-con-font">总收益</text>
+        <text class="right-con-green Numcolor">￥9552.52</text>
+        <text class="right-con-font">自主收益</text>
+        <text class="right-con-num Numcolor">￥2263.12</text>
+      </view>
+      <view class="right-con-three-two">
+        <text class="right-con-font">收益率</text>
+        <text class="right-con-green Numcolor">233.34%</text>
+        <text class="right-con-font">实盘跟随总额</text>
+        <text class="right-con-num Numcolor">￥7,7671.73</text>
+      </view>
+      <view class="right-con-three-three">
+        <text class="right-con-font">进13周最大回撤率</text>
+        <text class="right-con-num Numcolor">0.00%</text>
+      </view>
+      <view class="right-con-four">
+        <image src="../../images/TradeAccount/TradeAccountRight@2x.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 跟随账户 (交易分析-交易订单-订阅总览)导航栏 -->
+  <view class="right-con-con">
+    <view class="right-con-bar" wx:for="{{itemthree}}" wx:key="index">
+      <text bindtap="navSwitchthree" data-index="0" class="{{navStatethree==0 ? 'ontwo':''}}">{{item.Aonethree}}</text>
+      <text bindtap="navSwitchthree" data-index="1" class="{{navStatethree==1 ? 'ontwo':''}}">{{item.Atwothree}}</text>
+      <text bindtap="navSwitchthree" data-index="2" class="{{navStatethree==2 ? 'ontwo':''}}">{{item.Athreethree}}</text>
+    </view>
+
+    <!-- 跟随账户（交易分析） -->
+    <view class="fenxitwo" wx:if="{{navStatethree==0}}">
+      <view class="right-con-time">
+        <text>上次更新时间2019/09/19 17:21(GMT+8:00)</text>
+      </view>
+
+      <view class="echarts-box">
+
+        <view class="line-box">
+          <text class="linefont">收益</text>
+          <view class="linetopone" bindtap="syjyntwo">
+            <text>{{jynfonttwo}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+          <view class="linetoptwo" bindtap="syrtwo">
+            <text>{{rfonttwo}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- line图表组件 -->
+        <line></line>
+        <view class="bottom-line"></view>
+
+        <!-- 近一年-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenJYN" bindtap="hideModalJtwo" wx:if="{{showModalStatusJtwo}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataJtwo}}" class="commodity_attr_boxJYN" wx:if="{{showModalStatusJtwo}}">
+
+          <view wx:for="{{jyntwo}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="jyneventtwo" class="{{jynfontstatetwo==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalJtwo">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!-- 日-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalRtwo" wx:if="{{showModalStatusRtwo}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataRtwo}}" class="commodity_attr_boxR" wx:if="{{showModalStatusRtwo}}">
+
+          <view wx:for="{{rtwo}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="reventtwo" class="{{rfontstatetwo==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalRtwo">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+
+
+
+
+        <view class="line-box">
+          <text class="linefont">净值/余额</text>
+          <view class="linetwotop" bindtap="jzyejyntwo">
+            <text>{{jyntfonttwo}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- linetwo图表组件 -->
+        <linetwo></linetwo>
+        <view class="bottom-line"></view>
+
+        <!-- 近一年弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenJYN" bindtap="hideModalJTtwo" wx:if="{{showModalStatusJTtwo}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataJTtwo}}" class="commodity_attr_boxJYN" wx:if="{{showModalStatusJTtwo}}">
+
+          <view wx:for="{{jynttwo}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="jynteventtwo" class="{{jyntfontstatetwo==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalJTtwo">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <view class="line-box">
+          <text class="linefont">月份报告分析</text>
+        </view>
+        <!-- column图表组件 -->
+        <colume></colume>
+        <view class="bottom-line"></view>
+
+
+        <view class="line-box">
+          <text class="linefont">盈亏分析</text>
+          <view class="linetopone" bindtap="pcsjtwo">
+            <text>{{pcsjfonttwo}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+          <view class="linetoptwo-three" bindtap="xstwo">
+            <text>{{xsfonttwo}}</text>
+            <image class="lineimg" src="../../images/ic_tradestarts_down@2x.png"></image>
+          </view>
+        </view>
+        <!-- area图表组件 -->
+        <area></area>
+        <view class="bottom-line"></view>
+
+
+        <!-- 平仓时间-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalPCSJtwo" wx:if="{{showModalStatusPCSJtwo}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataPCSJtwo}}" class="commodity_attr_boxR" wx:if="{{showModalStatusPCSJtwo}}">
+
+          <view wx:for="{{pcsjtwo}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="pcsjeventtwo" class="{{pcsjfontstatetwo==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalPCSJtwo">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+        <!-- 小时-弹窗 -->
+        <!--屏幕背景变暗的背景  -->
+        <view class="commodity_screenR" bindtap="hideModalXStwo" wx:if="{{showModalStatusXStwo}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataXStwo}}" class="commodity_attr_boxR" wx:if="{{showModalStatusXStwo}}">
+
+          <view wx:for="{{xstwo}}" wx:key="index" id="{{index}}">
+            <view data-index="{{index}}" catchtap="xseventtwo" class="{{xsfontstatetwo==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalXStwo">
+            <text>取消</text>
+          </view>
+
+        </view>
+
+        <view class="line-box">
+          <text class="linefont">持仓时间</text>
+        </view>
+        <!-- areatwo图表组件 -->
+        <areatwo></areatwo>
+        <view class="bottom-linetwo"></view>
+
+
+        <!-- <view class="backback"></view> -->
+
+      </view>
+
+
+
+
+
+    </view>
+
+    <!-- 跟随账户（交易订单） -->
+    <view class="dindantwo" wx:if="{{navStatethree==1}}">
+      <view class="FuDongShouYi1}}">
+        <view class="TextLine">
+          <text>浮动收益</text>
+          <text>-￥250.25</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓手数</text>
+          <text>0.01标准手</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓仓位比例</text>
+          <text>0.03%</text>
+        </view>
+
+        <view class="TextLine">
+          <text>持仓亏损比例</text>
+          <text>0.00%</text>
+        </view>
+      </view>
+
+      <!--跟随账户 交易订单 正在持仓和历史交易切换-->
+      <view class="OrderBar">
+        <view class="OrderBarCon">
+          <view bindtap="GSDYNavSwitch" data-index="0" class="{{GSDYNavState==0?'onthree zz':'zz'}}">
+            <text>正在持仓</text>
+          </view>
+          <view bindtap="GSDYNavSwitch" data-index="1" class="{{GSDYNavState==1?'onthree zz':'zz'}}">
+            <text>历史交易</text>
+          </view>
+        </view>
+        <view class="underLine"></view>
+      </view>
+
+      <!--交易订单 正在持仓页面 -->
+      <view class="OrderBarContainer" wx:if="{{GSDYNavState==0}}">
+
+        <view class="OrderTopCon">
+          <view class="OrderTop">
+            <view class="OrderTopLeft">
+              <view class="OrderTopOne" catchtap="GSDYactionSheetTap">
+                <text>方向</text>
+                <text>|</text>
+                <text>{{GSDYmenu}}</text>
+                <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+              </view>
+              <view class="OrderTopTwo" catchtap="GSDYactionSheetTaptwo">
+                <text>{{GSDYmenutwo}}</text>
+                <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+              </view>
+            </view>
+            <view class="OrderTopRight">
+              <text>GMT+8:00</text>
+            </view>
+          </view>
+          <view class="UnderLineTwo"></view>
+        </view>
+
+        <!--交易订单 正在持仓 全部-弹窗 -->
+        <view class="commodity_screenqbqb" bindtap="hideModalGSqb" wx:if="{{showModalStatusGSqb}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataGSqb}}" class="commodity_attr_boxqbqb" wx:if="{{showModalStatusGSqb}}">
+          <view wx:for="{{actionSheetItemssix}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="gsqbevent" class="{{choosestatesix==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalGSqb">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 正在持仓 按最近开仓-弹窗 -->
+        <view class="commodity_screenqbqb" bindtap="hideModalGSazjkc" wx:if="{{showModalStatusGSazjkc}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataGSazjkc}}" class="commodity_attr_boxqbqb" wx:if="{{showModalStatusGSazjkc}}">
+          <view wx:for="{{actionSheetItemsseven}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="gsazjkcevent" class="{{choosestateseven==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalGSazjkc">
+            <text>取消</text>
+          </view>
+        </view>
+
+
+
+        <!--交易订单 正在持仓的订单 -->
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view class="OrderingBox" wx:for="{{GSDDOrderingDataList}}" wx:for-item="item" wx:key="index">
+            <!--交易订单 正在持仓的订单  简要信息-->
+            <view class="OrderBoxContentLine" catchtap='GSDDshowList' id='{{item.id}}'>
+              <view class="OrderBoxContentLineTop">
+                <view class="Left">
+                  <text class="Options">{{item.options}}</text>
+                  <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+                  <text class="StandHands">{{item.standhands}}</text>
+                  <text class="TextNormal">标准手</text>
+                </view>
+                <view class="Right">
+                  <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+                </view>
+              </view>
+
+              <view class="OrderBoxContentLineBottom">
+                <view class="Left">
+                  <text>{{item.optionsName}}</text>
+                  <view class="Range">
+                    <text>{{item.range1}}-</text>
+                    <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+                    <image src="{{item.img}}" class="IMG"></image>
+                  </view>
+                </view>
+                <view class="Right">
+                  {{item.pointNumber}}
+                </view>
+              </view>
+            </view>
+            <!--交易订单 正在持仓的订单  展开详情-->
+            <view class=" {{ehide==item.id?'ExpandOrderingBox':'hide'}}">
+
+              <view class="MaxBox">
+                <view class="ExpandOrderingBoxLeft" wx:for="{{item.GSDDchild}}" wx:for-item="GSDDchild" wx:key="">
+                  <view>
+                    <text>订单号</text>
+                    <text>{{GSDDchild.ordernumber}}</text>
+                  </view>
+                  <view>
+                    <text>止损</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>止盈</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>交易员</text>
+                    <text>淡墨无殇 @1</text>
+                  </view>
+                </view>
+
+                <view class="ExpandOrderingBoxRight" wx:for="{{item.GSDDchild}}" wx:for-item="GSDDchild" wx:key="">
+                  <view>
+                    <text class="fys">开仓时间</text>
+                    <text>{{GSDDchild.opentime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">手续费</text>
+                    <text>{{GSDDchild.commission}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">经纪商手数</text>
+                    <text>{{GSDDchild.jingjishangshoushu}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">利息</text>
+                    <text>{{GSDDchild.rates}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+        </scroll-view>
+      </view>
+
+      <!--跟随账户 交易订单 历史交易页面 -->
+      <view class="HistoryTranstion" wx:if="{{GSDYNavState==1}}">
+
+        <view class="TranstionBar">
+          <view class="TranstionBarCon">
+            <view class="TranstionConeOne" catchtap="GSLSactionSheetTap">
+              <text>{{GSLSmenu}}</text>
+              <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+            </view>
+            <view class="TranstionConeTwo" catchtap="GSLSactionSheetTaptwo">
+              <text>{{GSLSmenutwo}}</text>
+              <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+            </view>
+            <view class="TranstionTime">
+              <text>GMT+8:00</text>
+            </view>
+          </view>
+          <view class="underLine"></view>
+        </view>
+
+        <!--交易订单 历史交易 全部-弹窗 -->
+        <view class="commodity_screenqbqb" bindtap="hideModalGSLSqb" wx:if="{{showModalStatusGSLSqb}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataGSLSqb}}" class="commodity_attr_boxqbqb" wx:if="{{showModalStatusGSLSqb}}">
+          <view wx:for="{{GSLSactionSheetItems}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="gslsqbevent" class="{{choosestateeight==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalGSLSqb">
+            <text>取消</text>
+          </view>
+        </view>
+
+        <!--交易订单 历史交易 按最近开仓-弹窗 -->
+        <view class="commodity_screenLSAZJPC" bindtap="hideModalGSLSazjpc" wx:if="{{showModalStatusGSLSazjpc}}"></view>
+        <!--弹出框  -->
+        <view animation="{{animationDataGSLSazjpc}}" class="commodity_attr_boxLSAZJPC" wx:if="{{showModalStatusGSLSazjpc}}">
+          <view wx:for="{{GSLSactionSheetItemstwo}}" wx:key="" id="{{index}}">
+            <view data-index="{{index}}" catchtap="gslsazjpcevent" class="{{choosestatenine==index?'qbcon ys':'qbcon'}}">
+              <text>{{item.txt}}</text>
+            </view>
+          </view>
+          <view class="qbhengxian"></view>
+          <view class="qbquxiao" bindtap="hideModalGSLSazjpc">
+            <text>取消</text>
+          </view>
+        </view>
+
+
+
+        <!--跟随账户 交易订单 历史交易的订单 -->
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view class="OrderingBox" wx:for="{{GSLSOrderedDataList}}" wx:for-item="item" wx:key="index">
+            <!--跟随账户 交易订单 历史交易的订单  简要信息-->
+            <view class="OrderBoxContentLine" catchtap='GSLSshowListtwo' id='{{item.id}}'>
+              <view class="OrderBoxContentLineTop">
+                <view class="Left">
+                  <text class="Options">{{item.options}}</text>
+                  <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+                  <text class="StandHands">{{item.standhands}}</text>
+                  <text class="TextNormal">标准手</text>
+                </view>
+                <view class="Right">
+                  <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+                </view>
+              </view>
+
+              <view class="OrderBoxContentLineBottom">
+                <view class="Left">
+                  <text>{{item.optionsName}}</text>
+                  <view class="Range">
+                    <text>{{item.range1}}-</text>
+                    <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+                    <image src="{{item.img}}" class="IMG"></image>
+                  </view>
+                </view>
+                <view class="Right">
+                  {{item.pointNumber}}
+                </view>
+              </view>
+            </view>
+
+            <!--跟随账户 交易订单 历史交易的订单  展开详情-->
+            <view class="ExpandOrderingBox" class=" {{fhide==item.id?'ExpandOrderingBox':'hide'}}">
+              <image src="../../images/headimg/pic_order_expand_history.png" class="MaxImg"></image>
+
+              <view class="MaxBox">
+                <view class="ExpandOrderingBoxLeft" wx:for="{{item.GSLSchild}}" wx:for-item="GSLSchild" wx:key="">
+                  <view>
+                    <text>订单号</text>
+                    <text>{{GSLSchild.ordernumber}}</text>
+                  </view>
+                  <view>
+                    <text>止损</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>止盈</text>
+                    <text>。。。。</text>
+                  </view>
+                  <view>
+                    <text>利息</text>
+                    <text>￥-0.95</text>
+                  </view>
+                  <view>
+                    <text>交易员</text>
+                    <text>淡墨无殇 @1</text>
+                  </view>
+                </view>
+
+                <view class="ExpandOrderingBoxRight" wx:for="{{item.GSLSchild}}" wx:for-item="GSLSchild" wx:key="">
+                  <view>
+                    <text class="fys">开仓平仓</text>
+                    <text>跟随平仓</text>
+                  </view>
+                  <view>
+                    <text class="fys">开仓时间</text>
+                    <text>{{GSLSchild.opentime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">平仓时间</text>
+                    <text>{{GSLSchild.closetime}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">手续费</text>
+                    <text>{{GSLSchild.commission}}</text>
+                  </view>
+                  <view>
+                    <text class="fys">经纪商手数</text>
+                    <text>{{GSLSchild.jingjishangshoushu}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+          <view class="OrderBoxContentLinetwo"></view>
+        </scroll-view>
+      </view>
+      <!-- 创建账户 -->
+      <!-- <view class="addAccount" catchtap="GoToBindingAccount">
+        <text>+创建账户</text>
+      </view> -->
+
+
+    </view>
+
+    <!-- 跟随账户 （订阅总览） -->
+    <view class="dinyue" wx:if="{{navStatethree==2}}">
+
+      <!--订阅总览-->
+      <view class="OrderBar">
+        <view class="OrderBarCon">
+          <view bindtap="GSDYNavSwitchtwo" data-index="0" class="{{GSDYNavStatetwo==0?'onthree zz':'zz'}}">
+            <text>正在订阅</text>
+          </view>
+          <view bindtap="GSDYNavSwitchtwo" data-index="1" class="{{GSDYNavStatetwo==1?'onthree zz':'zz'}}">
+            <text>历史订阅</text>
+          </view>
+        </view>
+        <view class="underLine"></view>
+      </view>
+
+
+
+
+      <!--跟随账户 正在订阅 -->
+      <view class="SubcriseExpenditure" wx:if="{{GSDYNavStatetwo==0}}">
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view wx:for="{{GSDYsearchArray}}" wx:for-item="item" wx:key="">
+            <view class="hhadas" catchtap="GSDYshowList" id='{{item.id}}'>
+              <view class="hhadas2">
+                <image src="../../images/headimg/pic_Headportrait3.png" class="tupian"></image>
+              </view>
+              <view class="hhadas3">
+                <text class="txtx">{{item.name}}</text>
+                <text class="txtx2">{{item.font}}</text>
+              </view>
+              <view class="hhadas4">
+                <text class="txtx1">{{item.money}}</text>
+                <text class="txtx2a">跟随收益</text>
+              </view>
+            </view>
+            <view class="box" class=" {{ghide==item.id?'':'hide'}}">
+              <view class="abcdea" wx:for="{{item.GSDYchild}}" wx:for-item="GSDYchild" wx:key="">
+                <view class="zzls">
+                  <view class="zzls_img">
+                    <image src="../../images/SubscribeEpxend2x.png" class="zzls_img"></image>
+                  </view>
+                  <view class="zzls-con">
+                    <view class="tra">
+                      <text>按比例11倍</text>
+                    </view>
+                    <view class="trb-box box-one">
+                      <text class="trb-font">跟随金额</text>
+                      <text class="trb-num">{{GSDYchild.one}}</text>
+                    </view>
+                    <view class="trb-box">
+                      <text class="trb-font">跟随比例</text>
+                      <text class="trb-num">{{GSDYchild.two}}</text>
+                    </view>
+                    <view class="trb-box">
+                      <text class="trb-font">已订阅天数</text>
+                      <text class="trb-num">{{GSDYchild.three}}</text>
+                    </view>
+                  </view>
+                </view>
+                <!-- <view class="cde">
+                  <view class="aabb">
+                    <text class="fontcolor">跟随策略</text>
+                    <text class="fontcolortwo">按比例1倍</text>
+                  </view>
+                  <view class="aabbcc">
+                    <text class="fontcolor">跟随金额</text>
+                    <text class="fontcolortwo">{{GSDYchild.one}}</text>
+                  </view>
+                </view>
+                <view class="aabbimg">
+                  <image src="../../images/update@2x.png"></image>
+                </view>
+                <view class="cdeb">
+                  <view class="aabbdd">
+                    <text class="fontcolor">跟随下单</text>
+                    <switch checked="true" color="#00E266" style="transform:scale(0.65)" />
+                  </view>
+                  <view class="aabbee">
+                    <text class="fontcolor">订阅有效期</text>
+                    <text class="fontcolortwo">{{GSDYchild.two}}</text>
+                  </view>
+                </view> -->
+
+              </view>
+            </view>
+          </view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+        </scroll-view>
+        <!-- 创建账户 -->
+        <!-- <view class="addAccountTwo" catchtap="GoToBindingAccount">
+          <text>+创建账户</text>
+        </view> -->
+      </view>
+
+
+      <view bindtap="GSDYhideModal" wx:if="{{GSDYshowModalStatus}}"></view>
+      <!--取消预订弹出框  -->
+      <view animation="{{GSDYanimationData}}" class="GSDYcommodity_attr_box" wx:if="{{GSDYshowModalStatus}}">
+        <text class="mone">￥99.99/月</text>
+        <view class="dy" catchtap="GSDYTCtwo">
+          <text class="mone-font">订阅</text>
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" catchtap="GSDYTChideModal" wx:if="{{GSDYTCshowModalStatus}}"></view>
+      <!--订阅-弹出框  -->
+      <view animation="{{GSDYTCanimationData}}" class="GSDYTCcommodity_attr_box" wx:if="{{GSDYTCshowModalStatus}}">
+        <view class="cmwg">
+          <view class="cmwg-name">
+            <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@1</text></text>
+            <text class="zszh">（真实账户）</text>
+          </view>
+          <view class="cmwg-zh">
+            <text>您的跟随账户</text>
+          </view>
+          <view class="cmwg-tc" catchtap="gszhjz">
+            <text>{{ndgszh}}</text>
+            <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+          </view>
+          <view class="geli"></view>
+        </view>
+
+
+        <view class="gsfs-box">
+          <view class="gsfs">
+            <text>跟随方式</text>
+          </view>
+          <view class="zxgd" catchtap="gsfs">
+            <text>{{zxgd}}</text>
+            <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+          </view>
+        </view>
+
+        <view class="blodgeli"></view>
+
+        <view class="gdssgdbl">
+          <radio-group>
+            <view class="gdss" catchtap="gdss">
+              <label>
+                <view class="gdss-con">
+                  <radio checked='{{true}}'></radio>
+                  <text>固定手数</text>
+                </view>
+                <view class="{{gdblstate==0?'gdss-ipt':'gdss-ipt hidetwo'}}">
+                  <input placeholder="≥0.01手" style="padding-left:54rpx;"></input>
+                </view>
+              </label>
+            </view>
+            <view class="gdbl" catchtap="gdbl">
+              <label>
+                <view class="gdbl-con">
+                  <radio checked='{{check}}'></radio>
+                  <text>固定比例</text>
+                </view>
+                <view class="{{gdblstate==1?'gdss-ipt':'gdss-ipt hidetwo'}}">
+                  <input placeholder="≥10%" style="padding-left:54rpx;"></input>
+                </view>
+              </label>
+            </view>
+          </radio-group>
+        </view>
+        <view class="nextbtn" catchtap="nextbtn">
+          <text>下一步</text>
+        </view>
+
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screengszhjz" bindtap="gszhjzhideModal" wx:if="{{gszhjzshowModalStatus}}"></view>
+      <!--账户名称-净值-弹出框  -->
+      <view animation="{{gszhjzanimationData}}" class="commodity_attr_boxgszhjz" wx:if="{{gszhjzshowModalStatus}}">
+        <view class="zhxz">
+          <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gszhjzhideModal"></image>
+          <text>账户选择</text>
+        </view>
+
+        <view wx:for="{{zhxz}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh" catchtap="gszhjzTap" data-index="{{index}}">
+            <view class="{{rrrstate==index?'zhzh-con col':'zhzh-con'}}">
+              <view>{{item.zhone}}</view>
+            </view>
+            <image src="../../images/choose@2x.png" class="{{rrrstate==index?'':'dis'}}"></image>
+          </view>
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screengsfs" bindtap="gsfshideModal" wx:if="{{gsfsshowModalStatus}}"></view>
+      <!--跟随方式-弹出框  -->
+      <view animation="{{gsfsanimationData}}" class="commodity_attr_boxgsfs" wx:if="{{gsfsshowModalStatus}}">
+        <view class="zhxz">
+          <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gsfshideModal"></image>
+          <text>跟随方式</text>
+        </view>
+        <view wx:for="{{gsfs}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh" catchtap="zxgdTap" data-index="{{index}}">
+            <view class="{{nnnstate==index?'zhzh-con col':'zhzh-con'}}">
+              <text>{{item.zxone}}</text>
+            </view>
+            <image src="../../images/choose@2x.png" class="{{nnnstate==index?'':'dis'}}"></image>
+          </view>
+        </view>
+      </view>
+
+      <!-- 下一步-弹窗 -->
+      <view class="mask" animation="{{ani}}" wx:if="{{showModal}}"></view>
+      <!-- 弹出层 -->
+      <view class="modalDlg" wx:if="{{showModal}}">
+        <view class="tcmax-box">
+          <view class="box-top">
+            <text>跟随的交易员是模拟账户</text>
+            <text>确认支付？</text>
+          </view>
+          <view class="box-bottom">
+            <view class="box-qx" catchtap="boxqx">
+              <text>取消</text>
+            </view>
+            <view class="box-qr" catchtap="boxqr">
+              <text>确认</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 下一步-确认-弹窗 -->
+      <view class="mask" wx:if="{{showModaltwo}}"></view>
+      <!-- 弹出层 -->
+      <view class="modalDlg" wx:if="{{showModaltwo}}">
+        <view class="tcmax-box">
+          <view class="box-top">
+            <text>正在使用模拟账户跟随交易员</text>
+            <text>确认支付？</text>
+          </view>
+          <view class="box-bottom">
+            <view class="box-qx" catchtap="boxqrqx">
+              <text>取消</text>
+            </view>
+            <view class="box-qr" catchtap="boxqrqr">
+              <text>确认</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" catchtap="hideModalQR" wx:if="{{showModalStatusQR}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDataQR}}" class="commodity_attr_boxQR" wx:if="{{showModalStatusQR}}">
+        <view class="cmwg">
+          <view class="cmwg-name">
+            <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@1</text></text>
+            <text class="zszh">（真实账户）</text>
+          </view>
+          <view class="cmwg-zh">
+            <text>选择您的订阅时间</text>
+          </view>
+
+          <view wx:for="{{dysj}}" wx:key="" id="{{index}}">
+            <view class="dytime timertop">
+              <text class="timer">{{item.time}}</text>
+              <view class="moneybox" catchtap="qrzfxx" data-index="{{index}}">
+                {{item.money}}
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" catchtap="QRZFhideModal" wx:if="{{QRZFshowModalStatus}}"></view>
+      <!--弹出框  -->
+      <view animation="{{QRZFanimationData}}" class="commodity_attr_boxQRZF" wx:if="{{QRZFshowModalStatus}}">
+        <view class="QRZFXX-TOP">
+          <image src="../../images/ic_payfor_close@2x.png" class="qrzf-img" catchtap="QRZFhideModal"></image>
+          <text>确认支付信息</text>
+        </view>
+        <view class="money-name">
+          <text class="money-one">{{zfMoney}}</text>
+          <view class="name-font">跟随
+            <text class="name-name">{{zfName}}</text>
+            <text class="jiange"></text>时长：
+            <text class="name-name">{{zfTime}}</text>
+          </view>
+        </view>
+        <radio-group>
+          <label>
+            <view class="wxzf-box">
+              <view class="wxzf-con">
+                <image src="../../images/ic_payfor_wechat@2x.png" class="zf-img"></image>
+                <text>微信支付</text>
+              </view>
+              <radio checked='{{true}}' class="radio-right"></radio>
+            </view>
+          </label>
+          <label>
+            <view class="zfbzf-box">
+              <view class="zfbzf-con">
+                <image src="../../images/ic_payfor_alipay@2x.png" class="zf-img"></image>
+                <text>支付宝支付</text>
+              </view>
+              <radio checked='{{}}' class="radio-right"></radio>
+            </view>
+          </label>
+        </radio-group>
+        <view class="qrzf-btn" catchtap="qrzfbtn">
+          <text>确认支付</text>
+        </view>
+      </view>
+
+
+
+
+
+
+      <!--跟随账户 历史订阅 -->
+      <view class="SubcriseExpenditure" wx:if="{{GSDYNavStatetwo==1}}">
+        <scroll-view scroll-y="true" style="height:540rpx;">
+          <view wx:for="{{GSDYLSsearchArray}}" wx:for-item="item" wx:key="">
+            <view class="hhadas" catchtap="GSDYLSshowList" id='{{item.id}}'>
+              <view class="hhadas2">
+                <image src="../../images/headimg/pic_Headportrait3.png" class="tupian"></image>
+              </view>
+              <view class="hhadas3">
+                <text class="txtx">{{item.name}}</text>
+                <text class="txtx2">{{item.font}}</text>
+              </view>
+              <view class="NBFONT">
+                <text class="txtx1">{{item.money}}</text>
+                <text class="txtx2a">跟随收益</text>
+              </view>
+            </view>
+            <view class="box" class=" {{hhide==item.id?'':'hide'}}">
+              <view class="abcdeatwo" wx:for="{{item.GSDYLSchild}}" wx:for-item="GSDYLSchild" wx:key="">
+                <view class="nb-con">
+                  <view class="con-first">
+                    <text class="con-font">累计跟随手数</text>
+                    <text class="con-color">{{GSDYLSchild.one}}</text>
+                  </view>
+                  <view class="con-last">
+                    <text class="con-font">累计跟随金额</text>
+                    <text class="con-color">{{GSDYLSchild.two}}</text>
+                  </view>
+                </view>
+                <view class="nb-contwo">
+                  <text class="con-font">订阅时长</text>
+                  <text class="con-color">{{GSDYLSchild.three}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+          <view class="hhadastwo"></view>
+        </scroll-view>
+      </view>
+
+      <view bindtap="LSDYhideModal" wx:if="{{LSDYshowModalStatus}}"></view>
+      <!--订阅结构  -->
+      <view animation="{{LSDYanimationData}}" class="LSDYcommodity_attr_box" wx:if="{{LSDYshowModalStatus}}">
+        <view class="dinyuebox">
+          <text class="mone">￥55.55/月</text>
+          <view class="dy" catchtap="LSDYtc">
+            <text class="mone-font">订阅</text>
+          </view>
+        </view>
+      </view>
+
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" bindtap="LSDYTChideModal" wx:if="{{LSDYTCshowModalStatus}}"></view>
+      <!--历史订阅-订阅的弹出框  -->
+      <view animation="{{LSDYTCanimationData}}" class="LSDYTCtwo" wx:if="{{LSDYTCshowModalStatus}}">
+        <view class="cmwg">
+          <view class="cmwg-name">
+            <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@4</text></text>
+            <text class="zszh">（真实账户）</text>
+          </view>
+          <view class="cmwg-zh">
+            <text>您的跟随账户</text>
+          </view>
+          <view class="cmwg-tc" catchtap="gszhjztwo">
+            <text>{{ndgszhtwo}}</text>
+            <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+          </view>
+          <view class="geli"></view>
+        </view>
+
+        <view class="gsfs-box">
+          <view class="gsfs">
+            <text>跟随方式</text>
+          </view>
+          <view class="zxgd" catchtap="gsfstwo">
+            <text>{{zxgdtwo}}</text>
+            <image src="../../images/ic_tradestarts_down@2x.png" class="cmwg-img"></image>
+          </view>
+        </view>
+
+        <view class="blodgeli"></view>
+
+        <view class="gdssgdbl">
+          <radio-group>
+            <view class="gdss" catchtap="lsgdss">
+              <label>
+                <view class="gdss-con">
+                  <radio checked='{{true}}'></radio>
+                  <text>固定手数</text>
+                </view>
+                <view class="{{lsgdblstate==0?'gdss-ipt':'gdss-ipt hidetwo'}}">
+                  <input placeholder="≥0.01手" style="padding-left:54rpx;"></input>
+                </view>
+              </label>
+            </view>
+            <view class="gdbl" catchtap="lsgdbl">
+              <label>
+                <view class="gdbl-con">
+                  <radio checked='{{check}}'></radio>
+                  <text>固定比例</text>
+                </view>
+                <view class="{{lsgdblstate==1?'gdss-ipt':'gdss-ipt hidetwo'}}">
+                  <input placeholder="≥10%" style="padding-left:54rpx;"></input>
+                </view>
+              </label>
+            </view>
+          </radio-group>
+        </view>
+        <view class="nextbtn" catchtap="lsnextbtn">
+          <text>下一步</text>
+        </view>
+
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screengszhjz" bindtap="gszhjztwohideModal" wx:if="{{gszhjztwoshowModalStatus}}"></view>
+      <!--账户名称-净值-弹出框  -->
+      <view animation="{{gszhjztwoanimationData}}" class="commodity_attr_boxgszhjz" wx:if="{{gszhjztwoshowModalStatus}}">
+        <view class="zhxz">
+          <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gszhjztwohideModal"></image>
+          <text>账户选择</text>
+        </view>
+
+        <view wx:for="{{zhxztwo}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh" catchtap="gszhjzTaptwo" data-index="{{index}}">
+            <view class="{{ooostate==index?'zhzh-con col':'zhzh-con'}}">
+              <view>{{item.zhone}}</view>
+            </view>
+            <image src="../../images/choose@2x.png" class="{{ooostate==index?'':'dis'}}"></image>
+          </view>
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screengsfs" bindtap="gsfstwohideModal" wx:if="{{gsfstwoshowModalStatus}}"></view>
+      <!--跟随方式-弹出框  -->
+      <view animation="{{gsfstwoanimationData}}" class="commodity_attr_boxgsfs" wx:if="{{gsfstwoshowModalStatus}}">
+        <view class="zhxz">
+          <image src="../../images/ic_payfor_close@2x.png" class="gbimgs" catchtap="gsfstwohideModal"></image>
+          <text>跟随方式</text>
+        </view>
+        <view wx:for="{{gsfstwo}}" wx:key="" id="{{index}}">
+          <view class="zhzhzh" catchtap="zxgdTaptwo" data-index="{{index}}">
+            <view class="{{bbbstate==index?'zhzh-con col':'zhzh-con'}}">
+              <text>{{item.zxone}}</text>
+            </view>
+            <image src="../../images/choose@2x.png" class="{{bbbstate==index?'':'dis'}}"></image>
+          </view>
+        </view>
+      </view>
+
+      <!-- 下一步-弹窗 -->
+      <view class="mask" animation="{{ani}}" wx:if="{{showModalLs}}"></view>
+      <!-- 弹出层 -->
+      <view class="modalDlg" wx:if="{{showModalLs}}">
+        <view class="tcmax-box">
+          <view class="box-top">
+            <text>跟随的交易员是模拟账户</text>
+            <text>确认支付？</text>
+          </view>
+          <view class="box-bottom">
+            <view class="box-qx" catchtap="lsboxqx">
+              <text>取消</text>
+            </view>
+            <view class="box-qr" catchtap="lsboxqr">
+              <text>确认</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 下一步-确认-弹窗 -->
+      <view class="mask" wx:if="{{showModalLsTwo}}"></view>
+      <!-- 弹出层 -->
+      <view class="modalDlg" wx:if="{{showModalLsTwo}}">
+        <view class="tcmax-box">
+          <view class="box-top">
+            <text>正在使用模拟账户跟随交易员</text>
+            <text>确认支付？</text>
+          </view>
+          <view class="box-bottom">
+            <view class="box-qx" catchtap="lsboxqrqx">
+              <text>取消</text>
+            </view>
+            <view class="box-qr" catchtap="lsboxqrqr">
+              <text>确认</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" catchtap="LshideModalQR" wx:if="{{LsshowModalStatusQR}}"></view>
+      <!--弹出框  -->
+      <view animation="{{LsanimationDataQR}}" class="commodity_attr_boxQR" wx:if="{{LsshowModalStatusQR}}">
+        <view class="cmwg">
+          <view class="cmwg-name">
+            <text class="mame-bold">跟随 <text class="name-color">迟暮晚归@4</text></text>
+            <text class="zszh">（真实账户）</text>
+          </view>
+          <view class="cmwg-zh">
+            <text>选择您的订阅时间</text>
+          </view>
+
+          <view wx:for="{{dysjtwo}}" wx:key="" id="{{index}}">
+            <view class="dytime timertop">
+              <text class="timer">{{item.time}}</text>
+              <view class="moneybox" catchtap="qrzfxxtwo" data-index="{{index}}">
+                {{item.money}}
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+
+      <!--屏幕背景变暗的背景  -->
+      <view class="commodity_screen" catchtap="LSQRZFhideModal" wx:if="{{LSQRZFshowModalStatus}}"></view>
+      <!--弹出框  -->
+      <view animation="{{LSQRZFanimationData}}" class="commodity_attr_boxQRZF" wx:if="{{LSQRZFshowModalStatus}}">
+        <view class="QRZFXX-TOP">
+          <image src="../../images/ic_payfor_close@2x.png" class="qrzf-img" catchtap="LSQRZFhideModal"></image>
+          <text>确认支付信息</text>
+        </view>
+        <view class="money-name">
+          <text class="money-one">{{lszfMoney}}</text>
+          <view class="name-font">跟随
+            <text class="name-name">{{lszfName}}</text>
+            <text class="jiange"></text>时长：
+            <text class="name-name">{{lszfTime}}</text>
+          </view>
+        </view>
+        <radio-group>
+          <label>
+            <view class="wxzf-box">
+              <view class="wxzf-con">
+                <image src="../../images/ic_payfor_wechat@2x.png" class="zf-img"></image>
+                <text>微信支付</text>
+              </view>
+              <radio checked='{{true}}' class="radio-right"></radio>
+            </view>
+          </label>
+          <label>
+            <view class="zfbzf-box">
+              <view class="zfbzf-con">
+                <image src="../../images/ic_payfor_alipay@2x.png" class="zf-img"></image>
+                <text>支付宝支付</text>
+              </view>
+              <radio checked='{{}}' class="radio-right"></radio>
+            </view>
+          </label>
+        </radio-group>
+        <view class="qrzf-btn" catchtap="lsqrzfbtn">
+          <text>确认支付</text>
+        </view>
+      </view>
+
+
+
+
+
+    </view>
+
+
+
+
+  </view>
+
+
+
+</view>
+
+
+
+<image src='../../images/TradeAccount/TradeAccountBackTop@2x.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

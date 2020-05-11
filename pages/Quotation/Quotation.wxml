@@ -1,0 +1,477 @@
+<!-- 自定义导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="TransactionTopBar">
+    <view class="TransactionTopBarCon" wx:for="{{TopItem}}" wx:key="index">
+      <image wx:if="{{TopnavState==0}}" src="../../images/ic_add@2x.png" class="addHot" bindtap="GoToAddHotVariety"></image>
+      <text bindtap="TopnavSwitch" data-index="0" class="{{TopnavState==0?'ontwo':''}}">{{item.TopOne}}</text>
+      <text bindtap="TopnavSwitch" data-index="1" class="{{TopnavState==1?'ontwo':''}}">{{item.TopTwo}}</text>
+    </view>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+<!-- tabBar行情 (行情页面)-->
+<view class="container" wx:if="{{TopnavState==0}}">
+  <view class="choose">
+    <view>
+      <text bindtap="navSwitch" data-index="0" class="{{navState==0?'on':''}}">自选</text>
+    </view>
+    <view>
+      <text bindtap="navSwitch" data-index="1" class="{{navState==1?'on':''}}">热门品种</text>
+    </view>
+  </view>
+  <view class="text">
+    <text>卖</text>
+    <text>买</text>
+  </view>
+
+
+  <view class="price" wx:if="{{navState==0}}" bindtap="GoToVarietydetails">
+    <view class="price-one" wx:for="{{OptionsDataList}}" wx:key="index">
+      <view class="price-conone">
+        <text>{{item.num}}</text>
+        <text>{{item.font}}</text>
+      </view>
+      <view class="price-contwo">
+        <view class="AUD">
+          <!-- <text>{{item.number1}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodes}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_1.png" class="ImageArrow"></image>
+        </view>
+        <view class="CAD">
+          <!-- <text>{{item.number2}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodesTWO}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_2.png" class="ImageArrow"></image>
+        </view>
+        <text class="textLast">{{item.textLast}}</text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="price" wx:if="{{navState==1}}" bindtap="GoToVarietydetails">
+    <view class="price-one" wx:for="{{OptionsDataListTwo}}" wx:key="index">
+      <view class="price-conone">
+        <text>{{item.Twonum}}</text>
+        <text>{{item.Twofont}}</text>
+      </view>
+      <view class="price-contwo">
+        <view class="AUD">
+          <!-- <text>{{item.Twonumber1}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodes}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_1.png" class="ImageArrow"></image>
+        </view>
+        <view class="CAD">
+          <!-- <text>{{item.Twonumber2}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodesTWO}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_2.png" class="ImageArrow"></image>
+        </view>
+        <text class="textLast">{{item.TwotextLast}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- tabBar行情 (订单页面) -->
+<view class="Blue" wx:if="{{TopnavState==1}}">
+  <view class="FuDongShouYi1}}">
+    <view class="TextLine">
+      <text>浮动收益</text>
+      <text style="color: #E51C23;">-￥250.25</text>
+    </view>
+
+    <view class="TextLine">
+      <text>净值</text>
+      <text>￥9988.25</text>
+    </view>
+
+    <view class="TextLine">
+      <text>余额</text>
+      <text>￥9968.25</text>
+    </view>
+
+    <view class="TextLine">
+      <text>持仓总手数</text>
+      <text>0.01标准手</text>
+    </view>
+
+    <view class="TextLine">
+      <text>已用保证金</text>
+      <text>￥9988.25</text>
+    </view>
+
+    <view class="TextLine">
+      <text>可用保证金</text>
+      <text>￥9969.71</text>
+    </view>
+  </view>
+
+
+
+  <!--正在持仓和历史交易切换-->
+  <view class="OrderBar">
+    <view class="OrderBarCon">
+      <view bindtap="OrderNavSwitch" data-index="0" class="{{OrderNavState==0?'onthree':''}}">
+        <text>正在持仓</text>
+      </view>
+      <view bindtap="OrderNavSwitch" data-index="1" class="{{OrderNavState==1?'onthree':''}}">
+        <text>历史交易</text>
+      </view>
+    </view>
+    <view class="underLine"></view>
+  </view>
+
+
+  <!-- 正在持仓页面 -->
+  <view class="OrderBarContainer" wx:if="{{OrderNavState==0}}">
+
+    <view class="OrderTopCon">
+      <view class="OrderTop">
+        <view class="OrderTopLeft">
+          <view class="OrderTopOne" catchtap="actionSheetTap">
+            <text>类型</text>
+            <text>|</text>
+            <text>{{menu}}</text>
+            <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+          </view>
+          <view class="OrderTopTwo" catchtap="actionSheetTaptwo">
+            <text>方向</text>
+            <text>|</text>
+            <text>{{menutwo}}</text>
+            <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+          </view>
+        </view>
+        <view class="OrderTopRight">
+          <text>GMT+8:00</text>
+        </view>
+      </view>
+      <view class="UnderLineTwo"></view>
+    </view>
+
+    <!-- 正在持仓 跟随-弹窗 -->
+    <view class="commodity_screenqbqb" bindtap="hideModalqbqb" wx:if="{{showModalStatusqbqb}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDataqbqb}}" class="commodity_attr_boxqbqb" wx:if="{{showModalStatusqbqb}}">
+        <view wx:for="{{actionSheetItems}}" wx:key="" id="{{index}}">
+          <view data-index="{{index}}" class="" catchtap="qbevent"  class="{{choosestate==index?'qbcon ysys':'qbcon'}}">
+            <text>{{item.txt}}</text>
+          </view>
+        </view>
+        <view class="qbhengxian"></view>
+        <view class="qbquxiao" bindtap="hideModalqbqb">
+          <text>取消</text>
+        </view>
+      </view>
+
+    <!-- 正在持仓 全部-弹窗 -->
+    <view class="commodity_screenAZJKC" bindtap="hideModalAZJKC" wx:if="{{showModalStatusAZJKC}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDataAZJKC}}" class="commodity_attr_boxAZJKC" wx:if="{{showModalStatusAZJKC}}">
+        <view wx:for="{{actionSheetItemstwo}}" wx:key="" id="{{index}}">
+          <view data-index="{{index}}" catchtap="AZJKCevent"  class="{{choosestateT==index?'AZJKCcon ysys':'AZJKCcon'}}">
+            <text>{{item.txt}}</text>
+          </view>
+        </view>
+        <view class="AZJKChengxian"></view>
+        <view class="AZJKCquxiao" bindtap="hideModalAZJKC">
+          <text>取消</text>
+        </view>
+      </view>
+ 
+
+
+
+
+
+
+    <!-- 正在持仓的订单 -->
+    <view class="OrderingBox" wx:for="{{OrderingDataList}}" wx:for-item="item" wx:key="index">
+      <!-- 正在持仓的订单  简要信息-->
+      <view class="OrderBoxContentLine" catchtap='showList' data-id='{{item.id}}'>
+        <view class="OrderBoxContentLineTop">
+          <view class="Left">
+            <text class="Options">{{item.options}}</text>
+            <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+            <text class="StandHands">{{item.standhands}}</text>
+            <text class="TextNormal">标准手</text>
+          </view>
+          <view class="Right">
+            <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+          </view>
+        </view>
+
+        <view class="OrderBoxContentLineBottom">
+          <view class="Left">
+            <text>{{item.optionsName}}</text>
+            <view class="Range">
+              <text>{{item.range1}}-</text>
+              <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+              <image src="{{item.img}}" class="IMG"></image>
+            </view>
+          </view>
+          <view class="Right">
+            {{item.pointNumber}}
+          </view>
+        </view>
+      </view>
+      <!-- 正在持仓的订单  展开详情-->
+      <view class=" {{item.isShow?'show ExpandOrderingBox':'hide'}}">
+
+        <view class="MaxBox">
+          <view class="ExpandOrderingBoxLeft" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+            <view>
+              <text>订单号</text>
+              <text>{{child.ordernumber}}</text>
+            </view>
+            <view>
+              <text>止损</text>
+              <text>。。。。</text>
+            </view>
+            <view>
+              <text>止盈</text>
+              <text>。。。。</text>
+            </view>
+            <view>
+              <text>交易员</text>
+              <text>淡墨无殇 @1</text>
+            </view>
+          </view>
+
+          <view class="ExpandOrderingBoxRight" wx:for="{{item.child}}" wx:for-item="child" wx:key="">
+            <view>
+              <text class="fys">开仓时间</text>
+              <text>{{child.opentime}}</text>
+            </view>
+            <view>
+              <text class="fys">手续费</text>
+              <text>{{child.commission}}</text>
+            </view>
+            <view>
+              <text class="fys">经纪商手数</text>
+              <text>{{child.jingjishangshoushu}}</text>
+            </view>
+            <view>
+              <text class="fys">利息</text>
+              <text>{{child.rates}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+
+  <!-- 历史交易页面 -->
+  <view class="HistoryTranstion" wx:if="{{OrderNavState==1}}">
+    <view class="Transtion">
+      <view class="TranstionCon" wx:for="{{TranstioinItem}}" wx:key="index">
+        <view>
+          <text class="TranstionFont">历史交易手数</text>
+          <text class="Transtioinnum">{{item.Cone}}</text>
+        </view>
+        <view>
+          <text class="TranstionFont">历史交易笔数</text>
+          <text class="Transtioinnum two">{{item.Ctwo}}</text>
+        </view>
+        <view>
+          <text class="TranstionFont">总收益</text>
+          <text class="Transtioinnum">{{item.Cthree}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="TranstionBar">
+      <view class="TranstionBarCon">
+        <view class="TranstionConeOne" catchtap="actionSheetTapthree">
+          <text>类型</text>
+          <text>|</text>
+          <text>{{menuthree}}</text>
+          <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+        </view>
+        <view class="TranstionConeTwo" catchtap="actionSheetTapfour">
+          <text>方向</text>
+          <text>|</text>
+          <text>{{menufour}}</text>
+          <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+        </view>
+        <view class="TranstionConeThree" catchtap="actionSheetTapfive">
+          <text>{{menufive}}</text>
+          <image src="../../images/ic_foldscreen_dowm@2x.png" class="ImgDown"></image>
+        </view>
+        <view class="TranstionTime">
+          <text>GMT+8:00</text>
+        </view>
+      </view>
+      <view class="underLine"></view>
+    </view>
+
+    <!-- 历史交易 跟随-弹窗 -->
+    <view class="commodity_screenlsqb" bindtap="hideModallsqb" wx:if="{{showModalStatuslsqb}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDatalsqb}}" class="commodity_attr_boxlsqb" wx:if="{{showModalStatuslsqb}}">
+        <view wx:for="{{actionSheetItemsthree}}" wx:key="" id="{{index}}">
+          <view data-index="{{index}}" catchtap="lsqbevent"  class="{{choosestateThree==index?'qbcon ysys':'qbcon'}}">
+            <text>{{item.txt}}</text>
+          </view>
+        </view>
+        <view class="lsqbhengxian"></view>
+        <view class="lsqbquxiao" bindtap="hideModallsqb">
+          <text>取消</text>
+        </view>
+      </view>
+
+    <!-- 历史交易 全部-弹窗 -->
+    <view class="commodity_screenLSAZJPC" bindtap="hideModalLSAZJPC" wx:if="{{showModalStatusLSAZJPC}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDataLSAZJPC}}" class="commodity_attr_boxLSAZJPC" wx:if="{{showModalStatusLSAZJPC}}">
+        <view wx:for="{{actionSheetItemsfour}}" wx:key="" id="{{index}}">
+          <view data-index="{{index}}" catchtap="lsazjpcevent"  class="{{choosestatefour==index?'LSAZJPCcon ysys':'LSAZJPCcon'}}">
+            <text>{{item.txt}}</text>
+          </view>
+        </view>
+        <view class="LSAZJPChengxian"></view>
+        <view class="LSAZJPCquxiao" bindtap="hideModalLSAZJPC">
+          <text>取消</text>
+        </view>
+      </view>
+
+  <!-- 历史交易 按最近平仓-弹窗 -->
+    <view class="commodity_screenLSAZJPCT" bindtap="hideModalLSAZJPCT" wx:if="{{showModalStatusLSAZJPCT}}"></view>
+      <!--弹出框  -->
+      <view animation="{{animationDataLSAZJPCT}}" class="commodity_attr_boxLSAZJPCT" wx:if="{{showModalStatusLSAZJPCT}}">
+        <view wx:for="{{actionSheetItemsfive}}" wx:key="" id="{{index}}">
+          <view data-index="{{index}}" catchtap="lsazjpctevent"  class="{{choosestatefive==index?'LSAZJPCcon ysys':'LSAZJPCcon'}}">
+            <text>{{item.txt}}</text>
+          </view>
+        </view>
+        <view class="LSAZJPCThengxian"></view>
+        <view class="LSAZJPCTquxiao" bindtap="hideModalLSAZJPCT">
+          <text>取消</text>
+        </view>
+      </view>
+
+
+
+
+
+
+    <!-- 历史交易的订单 -->
+    <view class="OrderingBox" wx:for="{{OrderedDataList}}" wx:for-item="item" wx:key="index">
+      <!-- 历史交易的订单  简要信息-->
+      <view class="OrderBoxContentLine" catchtap='showListtwo' data-id='{{item.id}}'>
+        <view class="OrderBoxContentLineTop">
+          <view class="Left">
+            <text class="Options">{{item.options}}</text>
+            <text class="{{item.salestatus?'Buy':'Sale'}}">{{item.salestatus?'买':'卖'}}</text>
+            <text class="StandHands">{{item.standhands}}</text>
+            <text class="TextNormal">标准手</text>
+          </view>
+          <view class="Right">
+            <text class="{{item.money>0?'PriceUp':'PriceDown'}}">￥{{item.money | Money}}</text>
+          </view>
+        </view>
+
+        <view class="OrderBoxContentLineBottom">
+          <view class="Left">
+            <text>{{item.optionsName}}</text>
+            <view class="Range">
+              <text>{{item.range1}}-</text>
+              <text class="{{item.range2>item.range1?'Up':'Down'}}">{{item.range2}}</text>
+              <image src="{{item.img}}" class="IMG"></image>
+            </view>
+          </view>
+          <view class="Right">
+            {{item.pointNumber}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 历史交易的订单  展开详情-->
+      <view class="ExpandOrderingBox" class=" {{item.isShowtwo?'show ExpandOrderingBox':'hide'}}">
+        <image src="../../images/headimg/pic_order_expand_history.png" class="MaxImg"></image>
+
+        <view class="MaxBox">
+          <view class="ExpandOrderingBoxLeft" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+            <view>
+              <text>订单号</text>
+              <text>{{childtwo.ordernumber}}</text>
+            </view>
+            <view>
+              <text>止损</text>
+              <text>。。。。</text>
+            </view>
+            <view>
+              <text>止盈</text>
+              <text>。。。。</text>
+            </view>
+            <view>
+              <text>利息</text>
+              <text>￥-0.95</text>
+            </view>
+            <view>
+              <text>交易员</text>
+              <text>淡墨无殇 @1</text>
+            </view>
+          </view>
+
+          <view class="ExpandOrderingBoxRight" wx:for="{{item.childtwo}}" wx:for-item="childtwo" wx:key="">
+            <view>
+              <text class="fys">开仓平仓</text>
+              <text>跟随平仓</text>
+            </view>
+            <view>
+              <text class="fys">开仓时间</text>
+              <text>{{childtwo.opentime}}</text>
+            </view>
+            <view>
+              <text class="fys">平仓时间</text>
+              <text>{{childtwo.closetime}}</text>
+            </view>
+            <view>
+              <text class="fys">手续费</text>
+              <text>{{childtwo.commission}}</text>
+            </view>
+            <view>
+              <text class="fys">经纪商手数</text>
+              <text>{{childtwo.jingjishangshoushu}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>
+
+
+
+  <!-- 自定义底部导航栏 -->
+  <view class="tabbarBox">
+    <view class="tabbarview" catchtap="index">
+      <image src="/images/Tabbar/ic_index_unckecked.png"></image>
+      <text>首页</text>
+    </view>
+    <view class="tabbarview" catchtap="Transaction">
+      <image src="/images/Tabbar/ic_account_unchecked.png"></image>
+      <text>交易</text>
+    </view>
+    <view class="tabbarview" catchtap="Quotation">
+      <image src="/images/Tabbar/ic_quotation_checked.png"></image>
+      <text class='active'>行情</text>
+    </view>
+    <view class="tabbarview" catchtap="My">
+      <image src="/images/Tabbar/ic_mine_unchecked.png"></image>
+      <text>我的</text>
+    </view>
+  </view>
+
+
+

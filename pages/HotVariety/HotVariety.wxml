@@ -1,0 +1,74 @@
+<!-- 自定义顶部导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="zdyBar">
+    <view class="backbox" bindtap="backone">
+      <image src="../../images/ic_back@2x.png" class="back"></image>
+    </view>
+    <view class="addbox">
+      <image src="../../images/ic_add@2x.png" class="addhot" bindtap="GoToAddHotVariety"></image>
+    </view>
+    <text>热门品种</text>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="container">
+  <view class="choose">
+    <view>
+      <text bindtap="navSwitch" data-index="0" class="{{navState==0?'on':''}}">自选</text>
+    </view>
+    <view>
+      <text bindtap="navSwitch" data-index="1" class="{{navState==1?'on':''}}">热门品种</text>
+    </view>
+  </view>
+  <view class="text">
+    <text>卖</text>
+    <text>买</text>
+  </view>
+
+
+  <view class="price" wx:if="{{navState==1}}" bindtap="GoToVarietydetails">
+    <view class="price-one" wx:for="{{OptionsDataList}}" wx:key="index">
+      <view class="price-conone">
+        <text>{{item.num}}</text>
+        <text>{{item.font}}</text>
+      </view>
+      <view class="price-contwo">
+        <view class="AUD">
+          <!-- <text>{{item.number1}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodes}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_1.png" class="ImageArrow"></image>
+        </view>
+        <view class="CAD">
+          <!-- <text>{{item.number2}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodesTWO}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_2.png" class="ImageArrow"></image>
+        </view>
+        <text class="textLast">{{item.textLast}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="price" wx:if="{{navState==0}}" bindtap="GoToVarietydetails">
+    <view class="price-one" wx:for="{{OptionsDataListTwo}}" wx:key="index">
+      <view class="price-conone">
+        <text>{{item.Twonum}}</text>
+        <text>{{item.Twofont}}</text>
+      </view>
+      <view class="price-contwo">
+        <view class="AUD">
+          <!-- <text>{{item.Twonumber1}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodes}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_1.png" class="ImageArrow"></image>
+        </view>
+        <view class="CAD">
+          <!-- <text>{{item.Twonumber2}}</text> -->
+          <view class="ErSi">0.90<rich-text class="SanEr" nodes="{{nodesTWO}}"></rich-text>2</view>
+          <image src="../../images/arrowhead_2.png" class="ImageArrow"></image>
+        </view>
+        <text class="textLast">{{item.TwotextLast}}</text>
+      </view>
+    </view>
+  </view>
+</view>

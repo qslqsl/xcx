@@ -1,0 +1,428 @@
+page {
+  background-color: rgb(240, 240, 240);
+}
+/* 自定义顶部导航栏样式 */
+.custom{
+  display: flex;
+  align-items: center;
+}
+.zdyBar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.zdyBar text{
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+  margin-left: 32%;
+}
+.backbox{
+  width: 60rpx;
+}
+.back{
+  width: 16rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+
+
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 320rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+.GSSYcommodity_screen{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.GSSYcommodity_attr_box{
+  height: 480rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+.backfff {
+  background: #fff;
+}
+.zhzhzh image {
+  width: 36rpx;
+  height: 30rpx;
+}
+
+.zhzhzh {
+  width: 710rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20rpx;
+}
+.zhzh-con {
+  color: rgba(153, 153, 153, 1);
+  font-size: 28rpx;
+}
+.col {
+  color: rgb(53, 152, 165);
+}
+.dis {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.lowlow{
+  display: flex;
+}
+.HeightLow{
+  width: 120rpx;
+  height: 40rpx;
+  border-radius: 999em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+  border: 2rpx solid rgba(153, 153, 153, 1);
+}
+.HeightLow text{
+  color: rgba(153, 153, 153, 1);
+  font-size: 28rpx;
+}
+.HeightLow image{
+  width: 40rpx;
+  height: 20rpx;
+}
+.LowHeight{
+  width: 120rpx;
+  height: 40rpx;
+  border-radius: 999em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid rgba(153, 153, 153, 1);
+}
+.LowHeight text{
+  color: rgba(153, 153, 153, 1);
+  font-size: 28rpx;
+}
+.LowHeight image{
+  width: 40rpx;
+  height: 20rpx;
+}
+.ysys{
+  border: 2rpx solid rgb(53, 152, 165);
+}
+.ysystwo{
+  color: rgb(53, 152, 165) !important;
+}
+
+
+
+.con-bar {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  display: flex;
+  text-align: center;
+  position: relative;
+  top: 10rpx;
+}
+
+.one {
+  position: relative;
+  width: 50%;
+}
+
+.two {
+  width: 50%;
+}
+
+.one text {
+  font-size: 24rpx;
+}
+
+.one image {
+  width: 20rpx;
+  height: 10rpx;
+  margin-left: 8rpx;
+}
+
+.two text {
+  font-size: 24rpx;
+}
+
+.two image {
+  width: 20rpx;
+  height: 10rpx;
+  margin-left: 8rpx;
+}
+
+
+
+
+
+
+
+.BackColor{
+  margin-top: 12rpx;
+}
+.FollowBigShotBox {
+  width: 750rpx;
+  height: 297rpx;
+  margin-top: 10rpx;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.FollowBigShotBox:first-child {
+  margin-top: 1rpx;
+}
+
+.FollowBigShotBoxBottom {
+  width: 100%;
+  height: 162rpx;
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.FollowBigShotBottomRight {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.FollowBigShotBottomRight image {
+  width: 150rpx;
+  height: 143rpx;
+  border-radius: 6px;
+}
+
+.FollowBigShotBottomLeft {
+  width: 530rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  margin-top: -8rpx;
+}
+
+.view1 {
+  display: flex;
+  flex-flow: wrap;
+  flex: 1;
+}
+
+.View1 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.View2 {
+  display: flex;
+  height: 100%;
+  flex: 1;
+}
+
+.View2 {
+  align-items: flex-end;
+}
+
+.view44 {
+  background: #007aff;
+}
+
+.BigShotFonts {
+  width: 100%;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  margin-bottom: 2rpx;
+}
+
+.BigShotNumber {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  margin-top: 2rpx;
+}
+
+.FollowBigShotBoxTop {
+  width: 750rpx;
+  height: 112rpx;
+  border-bottom: 1rpx solid #ebebeb;
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.FollowBigShotHeadingImg {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 16rpx 0 20rpx;
+}
+
+.FollowBoxRight {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+}
+
+.FollowBoxRight1 {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.FollowBoxRight1 view:nth-of-type(1) {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  margin-top: 5rpx;
+}
+
+.FollowBoxRight1 view:nth-of-type(2) {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.FollowBoxRight2 {
+  display: flex;
+  width: 110rpx;
+  height: 50rpx;
+  background: rgba(53, 152, 165, 1);
+  border-radius: 25px;
+  margin-right: 20rpx;
+}
+
+.FollowBoxRight2 view {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  margin: auto;
+}
+
+.FollowBigShotBoxNoMargin {
+  margin-top: 0;
+}
+
+/* 遮罩层 */
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.2;
+}
+
+/* 弹出层 */
+
+.modalDlg {
+  width: 500rpx;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.tcmax-box {
+  width: 500rpx;
+  height: 250rpx;
+}
+
+.box-top {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid rgb(228, 228, 228);
+}
+
+.box-top text {
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.box-bottom {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+}
+
+.box-qx {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2rpx solid rgb(228, 228, 228);
+}
+
+.box-qx text {
+  font-size: 28rpx;
+}
+
+.box-qr {
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-qr text {
+  font-size: 28rpx;
+  color: rgb(53, 152, 165);
+}

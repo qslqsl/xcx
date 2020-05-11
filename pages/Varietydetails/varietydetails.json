@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Kline": "/components/echarts/Kline/Kline"
+  },
+  "navigationStyle": "custom"
+}

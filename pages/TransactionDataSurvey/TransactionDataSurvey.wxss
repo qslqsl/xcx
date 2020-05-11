@@ -1,0 +1,122 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+.ProfitBox,.StrokeNumberBox,.NumberOfHandsBox,.OthersBox{
+	width: 100%;
+}
+.ProfitBoxTitle,.StrokeNumberBoxTitle,.NumberOfHandsBoxTitle{
+	width: 100%;
+	height: 54rpx;
+	display: flex;
+}
+.ProfitBoxTitle text{
+	margin: auto 0;
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	margin-left:21rpx;
+}
+.StrokeNumberBoxTitle text{
+	margin: auto 0;
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	margin-left:21rpx;
+}
+.NumberOfHandsBoxTitle text{
+	margin: auto 0;
+	font-size:24rpx;
+	font-weight:400;
+	color:rgba(153,153,153,1);
+	margin-left:21rpx;
+}
+.ProfitBoxContent,.StrokeNumberBoxContent,.NumberOfHandsBoxContent,.OthersBoxContent{
+	width: 100%;
+	padding: 0 0 0 22rpx;
+	box-sizing: border-box;
+	background:rgba(255,255,255,1);
+	display: flex;
+	flex-flow: column;
+}
+.ProfitBoxContentLine,.StrokeNumberBoxContentLine,.NumberOfHandsBoxContentLine{
+	display: flex;
+	flex: 1;
+	box-sizing: border-box;
+	border-bottom: 1px solid #EBEBEB;
+	justify-content: space-between;	
+}
+.ProfitBoxContentLine text{
+	display: flex;
+	align-items: center;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.ProfitBoxContentLine	text:last-child{
+	margin-right:22rpx;
+}
+.StrokeNumberBoxContentLine text{
+	display: flex;
+	align-items: center;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.StrokeNumberBoxContentLine	text:last-child{
+	margin-right:22rpx;
+}
+.NumberOfHandsBoxContentLine text{
+	display: flex;
+	align-items: center;
+	font-size:28rpx;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+}
+.NumberOfHandsBoxContentLine	text:last-child{
+	margin-right:22rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ProfitBox{
+	height: 614rpx;
+}
+.ProfitBox .ProfitBoxContent{
+	height:560rpx;
+}
+.StrokeNumberBox{
+	height: 534rpx;
+}
+.StrokeNumberBox .StrokeNumberBoxContent{
+	height:480rpx;
+}
+.NumberOfHandsBox{
+	height: 374rpx;
+}
+.NumberOfHandsBox .NumberOfHandsBoxContent{
+	height:320rpx;
+}
+.OthersBox{
+	height: 534rpx;
+}
+.OthersBox .OthersBoxContent{
+	height:480rpx;
+}

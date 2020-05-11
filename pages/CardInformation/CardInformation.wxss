@@ -1,0 +1,175 @@
+.CardInfoFont{
+  width: 100%;
+  height: 54rpx;
+  line-height: 54rpx;
+  background-color: rgb(240, 240, 240);
+}
+.CardInfoFont text{
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-left: 20rpx;
+}
+.Card{
+  width: 100%;
+	height: 365rpx;
+  display: flex;
+}
+.PositiveCard{
+  width: 50%;
+  position: relative;
+}
+.Img{
+  width: 324rpx;
+  height: 279rpx;
+  position: absolute;
+  left: 25rpx;
+  top: 43rpx;
+}
+.InImg{
+  width: 200rpx;
+	height: 129rpx;
+  position: absolute;
+  left: 88rpx;
+  top: 88rpx;
+}
+.PositiveCard text{
+  position: absolute;
+  left: 129rpx;
+  top: 270rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  width: 120rpx;
+  height: 36rpx;
+}
+.NegativeCard{
+  width: 50%;
+  position: relative;
+}
+.Imgtwo{
+  width: 324rpx;
+  height: 279rpx;
+  position: absolute;
+  left: 25rpx;
+  top: 43rpx;
+}
+.InImgtwo{
+  width: 200rpx;
+	height: 129rpx;
+  position: absolute;
+  left: 88rpx;
+  top: 88rpx;
+}
+.NegativeCard text{
+  position: absolute;
+  left: 129rpx;
+  top: 270rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+  width: 120rpx;
+  height: 36rpx;
+}
+.BankInfoFont{
+  width: 100%;
+  height: 54rpx;
+  line-height: 54rpx;
+  background-color: rgb(240, 240, 240);
+}
+.BankInfoFont text{
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-left: 20rpx;
+}
+
+.BankInfo{
+  display: flex;
+  flex-direction: column;
+}
+.BankOne{
+  display: flex;
+  align-items: center;
+  width: 710rpx;
+  height: 102rpx;
+  margin: auto;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.BankOne text{
+  flex: 1;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+}
+.BankOne input{
+  flex: 2;
+  font-size: 24rpx;
+}
+
+
+.BankThree{
+  display: flex;
+  align-items: center;
+  width: 710rpx;
+  height: 102rpx;
+  margin: auto;
+  border-bottom: 2rpx solid #ebebeb;
+}
+.BankThree text{
+  flex: 1;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+}
+.BankThree input{
+  flex: 1.88;
+  font-size: 24rpx;
+}
+.BankThree image{
+  width: 30rpx;
+  height: 15rpx;
+}
+
+.InfoBottom{
+  width: 710rpx;
+  margin: 30rpx auto;
+  display: flex;
+  flex-direction: column;
+}
+.Info-one{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.Info-one text:nth-of-type(1){
+  margin-top: 10rpx;
+  font-size: 28rpx;
+}
+.Info-one text:nth-of-type(2){
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.Info-two{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.Info-two image{
+  width: 273rpx;
+	height: 200rpx;
+}
+.Info-three{
+  width: 100%;
+  height: 300rpx;
+}
+.success{
+  width: 360rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(53, 152, 165);
+  border-radius: 10rpx;
+  margin: auto;
+  margin-top: -40rpx;
+}
+.success text{
+  font-size: 28rpx;
+  color: #ffffff;
+}
+

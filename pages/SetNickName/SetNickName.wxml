@@ -1,0 +1,17 @@
+<view class="content">
+	<view class="TextBox">
+		<view class="Text1">
+			填写昵称
+	  </view>
+		<view class="Text2">
+			好听的昵称会让人更加印象深刻哦~
+		</view>
+		<input type="text" class="!UnderLineStatus?'Text3 NoActiveUnderLine':'Text3 ActiveUnderLine'" maxlength="8"/>
+		<view class="NumberAcount">
+			{{8}}
+		</view>
+	</view>
+  <view class="successbtn" catchtap="successbtn">
+    <text>完成</text>
+  </view>
+</view>

@@ -1,0 +1,182 @@
+<view class="TitleBox">
+  <view>
+    <text>免费订阅</text>
+  </view>
+  <text class="underLine"></text>
+</view>
+
+<!-- 筛选-账户评级 -->
+<view class="AccountLevelBox">
+  <view class="TypeBoxTop" catchtap="zhpjxl">
+    <text class="TypeBoxTopText">账户评级</text>
+    <image src="{{aa?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+  <view class="{{zhpjState==true?'show':'hide'}}">
+    <!-- 筛选-账户评级组件  复选框-->
+    <AccountRating type="checkbox"></AccountRating>
+  </view>
+  <text class="underLinetwo"></text>
+</view>
+
+
+<!-- 筛选-收益率 -->
+<view class="YieldBox">
+  <view class="TypeBoxToptwo" catchtap="sylxl">
+    <text class="TypeBoxTopTexttwo">收益率</text>
+    <image src="{{bb?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+
+  <view>
+    <view class="{{sylState==true?'show YieldBoxBottom1':'hide YieldBoxBottom1'}}">
+      <!-- 筛选-收益率组件  单选框-->
+      <RateOfReturn type="radio"></RateOfReturn>
+    </view>
+    <view class="{{sylState==true?'show YieldBoxBottom2':'hide YieldBoxBottom2'}}">
+      <view class="sylsylys">
+        <input class="YieldBoxBottom2Min" placeholder="最小值" />
+        <view class="Line"></view>
+        <input class="YieldBoxBottom2Max" placeholder="最大值" />
+      </view>
+    </view>
+  </view>
+
+  <text class="underLinethree"></text>
+</view>
+
+
+<!-- 筛选-近13周最大回撤 -->
+<view class="WithdrawalrecentBox">
+  <view class="TypeBoxTopthree" catchtap="zdhcxl">
+    <text class="TypeBoxTopTextthree">近13周最大回撤</text>
+    <image src="{{cc?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+  <view>
+    <view class="{{zdhcState==true?'show WithdrawalrecentBoxBottomBottom1':'hide WithdrawalrecentBoxBottomBottom1'}}">
+      <!-- 筛选-收益率组件  单选框-->
+      <Retracement type="radio"></Retracement>
+    </view>
+    <view class="{{zdhcState==true?'show WithdrawalrecentBoxBottom2':'hide WithdrawalrecentBoxBottom2'}}">
+      <view class="sylsylys">
+        <input class="WithdrawalrecentBoxBottom2Min" placeholder="最小值" />
+        <view class="Line"></view>
+        <input class="WithdrawalrecentBoxBottom2Max" placeholder="最大值" />
+      </view>
+    </view>
+  </view>
+  <text class="underLinefour"></text>
+</view>
+
+
+<!-- 筛选-交易周数 -->
+<view class="TradingCycleBox">
+  <view class="TypeBoxTopfour" catchtap="jyzsxl">
+    <text class="TypeBoxTopTextfour">交易周数</text>
+    <image src="{{dd?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+
+  <view>
+    <view class="{{jyzsState==true?'show TradingCycleBoxBottom1':'hide TradingCycleBoxBottom1'}}">
+      <!-- 筛选-收益率组件  单选框-->
+      <TradingWeek type="radio"></TradingWeek>
+    </view>
+    <view class="{{jyzsState==true?'show TradingCycleBoxBottom2':'hide TradingCycleBoxBottom2'}}">
+      <view class="sylsylys">
+        <input class="TradingCycleBoxBottom2Min" placeholder="最小值" />
+        <view class="Line"></view>
+        <input class="TradingCycleBoxBottom2Max" placeholder="最大值" />
+      </view>
+    </view>
+  </view>
+
+  <text class="underLinefive"></text>
+</view>
+
+
+<!-- 筛选-账户净值 -->
+<view class="AccountAmountBox">
+
+  <view class="TypeBoxTopfive" catchtap="zhjzxl">
+    <text class="TypeBoxTopTextfive">账户净值</text>
+    <image src="{{ee?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+
+  <view>
+    <view class="{{zhjzState==true?'show AccountAmountBoxBottom1':'hide AccountAmountBoxBottom1'}}">
+      <!-- 筛选-收益率组件  单选框-->
+      <AccountValue type="radio"></AccountValue>
+    </view>
+    <view class="{{zhjzState==true?'show AccountAmountBoxBottom2':'hide AccountAmountBoxBottom2'}}">
+      <view class="sylsylys">
+        <input class="AccountAmountBoxBottom2Min" placeholder="最小值" />
+        <view class="Line"></view>
+        <input class="AccountAmountBoxBottom2Max" placeholder="最大值" />
+      </view>
+    </view>
+  </view>
+
+  <text class="underLinesix"></text>
+</view>
+
+
+<!-- 筛选-经济商 -->
+<view class="lastbox">
+
+  <view class="TypeBoxTopsix" catchtap="jjsxl">
+    <text class="TypeBoxTopTextsix">经济商</text>
+    <image src="{{ff?imga:imgb}}" class="ImgDown ImgUp"></image>
+  </view>
+
+  <view class="{{jjsState==true?'show lastbox-con':'hide lastbox-con'}}">
+    <view class="tcall">
+      <text>全部</text>
+    </view>
+    <!-- <view class="tjMax" wx:for="{{value}}" wx:key id="{{index}}">
+      <view class="tjcon" bindtap="delet" id="{{index}}">
+        <image src="../../images/ic_expand_close2@2x.png" class="tjimg"></image>
+        <view class="tjbox">
+          <text>{{item.tcone}}</text>
+        </view>
+      </view>
+    </view> -->
+    <view wx:for="{{value}}" id="{{index}}" class="addval tcall" wx:key>
+      <text>{{item.tcone}}</text>
+      <image src="../../images/ic_expand_close2@2x.png" bindtap="delet" id="{{index}}"></image>
+    </view>
+    <view class="tcadd" bindtap="add">
+      <text>+</text>
+    </view>
+  </view>
+
+  <text class="underLineseven"></text>
+</view>
+
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--加号-弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class="tcbox">
+    <view class="top-con">
+      <image src="../../images/ic_payfor_close@2x.png" class="cha" bindtap="hideModal"></image>
+      <text class="font-jjsxz">经纪商选择</text>
+      <text class="font-qd" bindtap="hideModal">确定</text>
+    </view>
+    <scroll-view scroll-y="true" style="height: 500rpx;">
+      <view class="bottom-con" wx:for="{{AccountRatingList}}" wx:key="" data-index="{{index}}" catchtap="ztTap">
+        <text class="{{item.checked?'colcol':''}}">{{item.tcone}}</text>
+        <image class="{{item.checked?'show dui':'hide dui'}}" src="../../images/ic_checked_@2x.png"></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+
+
+
+<!-- 重置确认 -->
+<view class="ContentBottom">
+  <view class="BottomBtn">
+    <text>重置</text>
+    <text>确认</text>
+  </view>
+</view>

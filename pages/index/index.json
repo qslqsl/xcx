@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "TradeStars":"/components/Index/TradeStars/TradeStars",
+    "FollowBigShot": "/components/Index/FollowBigShot/FollowBigShot",
+    "HotVariety": "/components/Index/HotVariety/HotVariety"
+  },
+  "navigationStyle":"custom"
+}
+

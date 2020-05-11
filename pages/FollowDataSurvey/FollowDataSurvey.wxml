@@ -1,0 +1,57 @@
+<view class="content">
+  <view class="ProfitBox">
+    <view class="ProfitBoxTitle">
+      <text>收益</text>
+    </view>
+    <view class="ProfitBoxContent">
+      <view class="ProfitBoxContentLine" wx:for="{{Profit}}" wx:key="index">
+        <text>{{item.LineName}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="PointNumberBox">
+    <view class="PointNumberBoxTitle">
+      <text>点数</text>
+    </view>
+    <view class="PointNumberBoxContent">
+      <view class="PointNumberBoxContentLine" wx:for="{{PointNumber}}" wx:key="index">
+        <text>{{item.LineName}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="StrokeNumberBox">
+    <view class="StrokeNumberBoxTitle">
+      <text>笔数</text>
+    </view>
+    <view class="StrokeNumberBoxContent">
+      <view class="StrokeNumberBoxContentLine" wx:for="{{StrokeNumber}}" wx:key="index">
+        <text>{{item.LineName}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="NumberOfHandsBox">
+    <view class="NumberOfHandsBoxTitle">
+      <text>手数（标准手）</text>
+    </view>
+    <view class="NumberOfHandsBoxContent">
+      <view class="NumberOfHandsBoxContentLine" wx:for="{{NumberOfHands}}" wx:key="index">
+        <text>{{item.LineName}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="OthersBox">
+    <view class="NumberOfHandsBoxTitle">
+      <text>其他</text>
+    </view>
+    <view class="OthersBoxContent">
+      <view class="NumberOfHandsBoxContentLine" wx:for="{{Others}}" wx:key="index">
+        <text>{{item.LineName}}</text>
+        <text>{{item.value}}</text>
+      </view>
+    </view>
+  </view>
+</view>

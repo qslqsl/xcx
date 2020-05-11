@@ -1,0 +1,254 @@
+<view class="BackGroundWhite BgmBox">
+  <view class="BinddingAccountBoxTop">
+    <image src="../../images/ic_reasch@2x.png" class="imgSearch"></image>
+    <input type="text" class="searchClass" style="color: #333333;" placeholder="搜索更多经纪商" placeholder-class="placeholder_style" />
+  </view>
+  <view>
+    <view class="BinddingAccountBoxContent" wx:for="{{BrokerFilterDataList}}" wx:key="index">
+      <view class="Left">
+        <image class="imgBorder" src="../../images/pic_bangding@2x.png"></image>
+        <image class="imgContent" src="../../images/pic_account_logo@2x.png"></image>
+      </view>
+      <view class="Right">
+        <view>
+          <text class="ServerName">{{item.ServerName}}</text>
+          <text class="ServiceCharge">{{item.ServiceCharge}}</text>
+        </view>
+        <view>
+          <text>监管：{{item.ServiceSupervise}}</text>
+          <text class="ClounmLine"></text>
+          <text>最低入金：{{item.MinimumDeposit | Money}}</text>
+        </view>
+        <view bindtap="clickme">
+          绑定账户
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 第一个弹窗 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <view class="uni-risk-box">
+    <text class="RiskNotice">风险提示</text>
+    <scroll-view scroll-y="true" class="ScollorBox">
+      <view>
+        尊敬的投资人：
+        <br/>
+        <text class="Hello">您好！</text>
+        <text>根据监管要求，XTC郑重提示：XTC金融平台提供的出借项目（模式）仅为XTC金融作为信息中介推出，您在选择出借项目（模式）前应对出借项目（模式）的风险进行全面了解、充分认识、谨慎决策，您应对其判断承担全部责任并自行承担全部风险。如您通过XTC金融平台进行下一步操作，即表示已经认真阅读本提示书并完全了解与接受。
+            </text>
+        <text>1. 政策风险：因国家宏观政策、财政政策、货币政策、监管导向、行业政策、地区发展政策等因素引起的风险。
+            </text>
+        <text>2. 市场风险：因市场资金面紧张或利率波动、行业不景气企业效益下滑等因素引起的风险。
+            </text>
+        <text>3. 借款人信用风险：当借款人因收入情况、财产状况发生变化、人身出现意外、发生疾病、死亡等情况，短期或者长期丧失还款能力，或者借款人的还款意愿发生变化时，您的出借资金可能无法按时回收甚至无法回收。
+            </text>
+        <text>4. 退出风险：您持有的出借项目将以债权转让方式通过厚本金融平台自动进行转让。厚本金融不对债权转让完成的时间以及债权转让能否全部成功实现做出任何承诺，未成功转让的出借项目将显示在您厚本金融账户中,由您以持有债权的方式退出，您面临资金不能变现、丧失其他出借机会的风险。
+            </text>
+        <text>5. 技术风险：由于无法控制和不可预测的系统故障、设备故障、通讯故障、电力故障、网络故障、黑客或计算机病毒攻击、以及其它因素，可能导致平台出现非正常运行或者瘫痪，由此导致甲方无法及时进行查询、充值、出借、提现等操作。
+            </text>
+        <text>6. 不可抗力风险：由于战争、动乱、自然灾害等不可抗力因素的出现而可能导致甲方出借资金损失的风险。 您作为出借人，不得从事以下行为或存在以下情形：
+            </text>
+
+      </view>
+    </scroll-view>
+    <view class="BtnBox">
+      <view class="BtnBoxLeft">
+        <view class="tishi">
+          <radio checked='{{check}}' bindtap='radiocon'></radio>
+          <text>不再提示</text>
+        </view>
+      </view>
+      <view class="BtnBoxRight">
+        <view class="AgreeBtn" catchtap="TCtwo">
+          我同意
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 第二个弹窗 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" catchtap="hideModaltwo" wx:if="{{showModalStatustwo}}"></view>
+<!--弹出框  -->
+<view animation="{{animationDatatwo}}" class="commodity_attr_box2" wx:if="{{showModalStatustwo}}">
+  <view class="{{Identitystete==1?'uni-risk-Box2-Trade':'uni-risk-Box2-Follow'}}">
+    <text class="DoneUserInfo">完善用户资料</text>
+    <text class="SelectIdentity">选择身份</text>
+    <radio-group>
+      <view catchtap="IdentityBtn" data-index="{{0}}" class="{{Identitystete==0?'FollowBox':'FollowBox'}}">
+        <label>
+          <radio checked="{{checktwo}}"></radio>
+          <view class="FollowBoxRight">
+            <text>跟随者</text>
+            <text>成为跟随者，毫秒级同步优秀交易员订单，轻松实现、跟随高 收益。</text>
+          </view>
+        </label>
+      </view>
+      <view catchtap="IdentityBtn" data-index="{{1}}" class="{{Identitystete==1?'FollowBox':'FollowBox'}}">
+        <label>
+          <radio checked="{{check}}"></radio>
+          <view class="TradeBoxRight">
+            <text>交易员</text>
+            <text>成为交易员能获取订阅费，盈利能力越强，受欢迎程度越高， 订阅费越丰厚。</text>
+          </view>
+        </label>
+      </view>
+    </radio-group>
+
+    <view class="TradingCommitments" wx:if="{{Identitystete==1}}">
+      <text class="promiseText">交易承诺</text>
+      <view class="TradingStrategy">描述好的交易策略，将会获得更多的订阅
+        <text class="logocolor">（请谨慎填写，一经 确认将不可修改）</text>
+      </view>
+      <textarea class="TextareaBox" style="color:#999999;font-size:24rpx;padding-top:10rpx;" placeholder="请最少输入30个字" maxlength="200"></textarea>
+      <!-- <textarea v-model="TradeStrategy" :class="IsFous?'TextareaBox TextareaInput':'TextareaBox TextareaNormal'" @focus="FocusEvent()" @blur="BlurEvent()"></textarea> -->
+    </view>
+    <view class="BtnNormal" catchtap="GotoThree">
+      <text>确认</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- 第三个弹窗 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModalthree" wx:if="{{showModalStatusthree}}"></view>
+<!--弹出框  -->
+<view animation="{{animationDatathree}}" class="commodity_attr_box" wx:if="{{showModalStatusthree}}">
+  <view class="Box3">
+    <view class="Box3ContentTop">添加
+      <text class="BrokerName">第一金</text> {{Identitystete==1?'交易员':'跟随者'}}账户</view>
+    <view class="Box3UpdateBox">
+      <view class="Box3UpdateBoxLeft">
+        <text class="Infomation">已填写用户资料:</text>
+        <text class="InfoCard">账户类型-MT4 身份类型-{{Identitystete==1?'交易员':'跟随者'}}</text>
+      </view>
+      <view class="Box3UpdateBoxRight">
+        <view class="UpdateBox" bindtap="UpdateIdentity">
+          修改
+        </view>
+      </view>
+      <view class="underLine"></view>
+    </view>
+    <!-- 选择服务器 -->
+    <view class="SelectService">
+      <view class="aaaa">
+        <text class="bdzh">绑定账户</text>
+        <text class="rnyy">如你已有真实帐户，请绑定账户</text>
+      </view>
+      <view class="bbbb">
+        <text class="fwq">服务器</text>
+      </view>
+      <view class="cccc" catchtap="ChoosePop">
+        <text class="ServeLastData">{{qxz}}</text>
+        <image src="../../images/ic_foldscreen_dowm@2x.png" mode="" class="imgDown"></image>
+      </view>
+      <view class="underLinetwo"></view>
+    </view>
+    <!-- 选择账户 -->
+    <view class="TradeAccount">
+      <view class="dddd">
+        <text class="zh">账户</text>
+      </view>
+      <view class="input">
+        <input type="text" value="" class="AccountInput" placeholder="请输入MT4标准账户" placeholder-class="placeholder_style" />
+      </view>
+    </view>
+    <!-- 账号密码-->
+    <view class="AccountPassword">
+      <view class="zhmm">
+        <text>账户密码</text>
+      </view>
+      <!-- <view class="eeee">
+         交易员密码选择弹窗 
+        <view class="TradePassword">
+           跟随者身份 
+          <view class="sf" wx:if="{{Identitystete==0}}">
+            <text class="jyzd">交易密码</text>
+            <image src="../../images/ic_foldscreen_dowm@2x.png" mode="" class="imgDowntwo"></image>
+          </view>
+           交易员身份 
+          <view class="sf" wx:if="{{Identitystete==1}}" catchtap="password">
+            <text class="jyzdtwo">{{jymmzdmm}}</text>
+            <image src="../../images/ic_foldscreen_dowm@2x.png" mode="" class="imgDowntwo"></image>
+          </view>
+        </view>
+        <input type="text" value="" password="true" class="TradePasswordInput" placeholder="请填写交易密码" wx:if="{{jyzdState==0}}"/>
+        <input type="text" value="" password="true" class="TradePasswordInput" placeholder="请填写只读密码" wx:if="{{jyzdState==1}}"/>
+      </view> -->
+      <view class="{{Identitystete==0?'show ffff':'hide'}}">
+        <!-- 跟随者身份 -->
+        <view class="sf" >
+          <text class="jyzd">交易密码</text>
+          <image src="../../images/ic_foldscreen_dowm@2x.png" mode="" class="imgDowntwo"></image>
+        </view>
+        <input type="text" value="" password="true" class="TradePasswordInput" placeholder="请填写交易密码"/>
+      </view>
+
+      <view class="{{Identitystete==1?'show ffff':'hide'}}">
+        <!-- 交易员身份  -->
+        <view class="sf" catchtap="password">
+          <text class="jyzdtwo">{{jymmzdmm}}</text>
+          <image src="../../images/ic_foldscreen_dowm@2x.png" mode="" class="imgDowntwo"></image>
+        </view>
+        <input type="text" value="" password="true" class="TradePasswordInput" placeholder="请填写交易密码" wx:if="{{jyzdState==0}}" />
+        <input type="text" value="" password="true" class="TradePasswordInput" placeholder="请填写只读密码" wx:if="{{jyzdState==1}}" />
+      </view>
+
+    </view>
+    <view class="BtnNormaltwo" catchtap="BangDingTrader">
+      <text>绑定成为交易员</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- 第四个弹窗 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen2" bindtap="hideModalfour" wx:if="{{showModalStatusfour}}"></view>
+<!--弹出框  -->
+<view animation="{{animationDatafour}}" class="commodity_attr_box3" wx:if="{{showModalStatusfour}}">
+  <view class="maxfwq">
+    <image src="../../images/ic_payfor_close@2x.png" class="cha" bindtap="QXhideModalfour"></image>
+    <text>服务期选择</text>
+  </view>
+  <view wx:for="{{fwqarr}}" wx:key="" id="{{index}}">
+    <view catchtap="chooseid" data-index="{{index}}" class="{{choosestate==index?'FontColor ys':'FontColor'}}">
+      <text>{{item.one}}</text>
+      <image src="../../images/choose@2x.png" class="{{choosestate==index?'show chooseimg':'hide'}}"></image>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 第五个弹窗 -->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screenPWD" bindtap="PWDhideModal" wx:if="{{PWDshowModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{PWDanimationData}}" class="commodity_attr_boxPWD" wx:if="{{PWDshowModalStatus}}">
+  <view class="zhxzmm">
+    <image src="../../images/ic_payfor_close@2x.png" class="cha" bindtap="PWDhideModal"></image>
+    <text>选择账户密码</text>
+  </view>
+
+  <view wx:for="{{mm}}" wx:key="" id="{{index}}">
+    <view catchtap="jyzdmm" data-index="{{index}}" class="{{jyzdState==index?'jymm ys':'jymm'}}">
+      <text>{{item.two}}</text>
+      <image src="../../images/choose@2x.png" class="{{jyzdState==index?'show chooseimg':'hide'}}"></image>
+    </view>
+  </view>
+  <!-- <view catchtap="jyzdmm" data-index="1" class="{{jyzdState==1?'zdmm ys':'zdmm'}}">
+    <text>只读密码</text>
+    <image src="../../images/choose@2x.png" class="{{jyzdState==1?'show chooseimg':'hide'}}"></image>
+  </view> -->
+</view>

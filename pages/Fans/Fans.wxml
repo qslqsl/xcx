@@ -1,0 +1,60 @@
+<!-- 自定义顶部导航栏 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <view class="zdyBar">
+    <view class="backbox"  bindtap="backone">
+      <image src="../../images/ic_back@2x.png" class="back"></image>
+    </view>
+    <text>粉丝</text>
+  </view>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<view class="lalala" wx:for="{{FansData}}" wx:key="index">
+  <view class="lalala1">
+    <image src="{{item.img}}" class="img"></image>
+  </view>
+  <view class="lalala2">
+    <view class="lalala21">
+      <text class="txtx">{{ item.UserName }}</text>
+    </view>
+    <view class="lalala22">
+      <text class="text">关注：</text>
+      <text class="text2">{{ item.FocusNumber }}</text>
+      <text class="text">粉丝：</text>
+      <text class="text2">{{ item.FansNumber }}</text>
+    </view>
+    <view class="lalala23">
+      <text class="text">{{ item.PersonSignature }}</text>
+    </view>
+  </view>
+  <view>
+    <view class="FocusBox" catchtap="followed" id="{{index}}">
+      <!-- 关注 -->
+      <!-- <text>{{ item.isFocus == 1 ? '已关注' : '+关注' }}</text> -->
+      <!-- 粉丝 -->
+      <text wx:if="{{item.isFocus == 1}}">相互关注</text>
+      <text wx:if="{{item.isFocus == 0}}">+关注</text>
+    </view>
+  </view>
+</view>
+
+<!--关注-已关注-弹窗 -->
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <!-- 弹出层 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="tcmax-box">
+      <view class="box-top">
+        <text>提示</text>
+        <text>{{contentgz}}</text>
+      </view>
+      <view class="box-bottom">
+        <view class="box-qx" catchtap="boxqx">
+          <text>取消</text>
+        </view>
+        <view class="box-qr" catchtap="boxqr">
+          <text>确认</text>
+        </view>
+      </view>
+    </view>
+  </view>

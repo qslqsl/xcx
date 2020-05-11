@@ -1,0 +1,16 @@
+<view class="SearchContainer">
+  <view class="SearchContent">
+    <view class="Scontent">
+      <image src="../../images/ic_reasch@2x.png" class="searchImg"></image>
+      <input type="text" placeholder="搜索昵称" class="SearchName"></input>
+    </view>
+    <view class="cancel" bindtap="BackIndex"><text>取消</text></view>
+  </view>
+  
+  <view class="HistoryRecord">
+    <text>历史记录</text>
+  </view>
+  <view class="SearchDiscovery">
+    <text>搜索发现</text>
+  </view>
+</view>

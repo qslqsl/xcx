@@ -1,0 +1,32 @@
+<view class="asdsa">
+				<view class="asdsaa">
+					<view>
+						<text class="text">资金保护</text>
+						<switch  style="transform:scale(0.65)" class="switch_imgbox_openning"/>
+					</view>
+					<view>
+						<text class="text2">当账户净值低于保护值时将平仓所有订单（自主+跟随）并关闭跟随下单功能</text>
+					</view>
+				</view>
+				<view class="asdaa"  catchtap="GoToProtectionValue">
+					<text class="text3">资金保护值</text>
+					<text class="text4">￥0</text>
+					<image src="../../images/ic_more.png" mode="" class="img_more"></image>
+				</view>
+</view>
+<view class="asdsa">
+				<view class="asdsaa">
+					<view>
+						<text class="text">跟随交易员下单</text>
+						<switch  style="transform:scale(0.65)"class="switch_imgbox_openning"/>
+					</view>
+					<view>
+						<text class="text2">允许跟随交易员下单；停用后跟随关系不变，仍跟随平仓，但不再跟随下单</text>
+					</view>
+				</view>
+				<view class="asdaa" catchtap="GoToModifyPositions">
+					<text class="text3">跟随持仓总手数</text>
+					<text class="text4">不限</text>
+					<image src="../../images/ic_more.png" mode="" class="img_more"></image>
+				</view>
+</view>
